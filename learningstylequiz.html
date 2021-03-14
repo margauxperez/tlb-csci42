@@ -6,18 +6,34 @@
 </head>
 
 <body>
-    <h1>Learning Style Quiz</h1>
-    <div>
-        <p>Improve your study habits as you determine your learning style.</p>
+    <div class='feature-heading'>
+        <h1>Learning Style Quiz</h1>
+        <div>
+            <p>Improve your study habits as you determine your learning style.</p>
+        </div>
     </div>
     <div>
-        <p>In taking this test, The Learning Buddy - Learning Style Quiz will assess your study habits based on how you approach different studying scenarios.
-            Based on the scenario, indicate it you seldom, sometimes, or often do it. This will take at least 15 minutes to complete.
-            Answer truthfully to get the best results. We recommend that you take this quiz once a month to track if there are any changes in your routine. 
-        </p>
-    </div>
-    <div>
-        <button>Begin</button>
+        <div id='lsq-instructions'>
+            <p>In taking this test, The Learning Buddy - Learning Style Quiz will assess your study habits based on
+                how you approach different studying scenarios. Based on the scenario, indicate it you seldom,
+                sometimes, or often do it. This will take at least 15 minutes to complete. Answer truthfully to get
+                the best results. We recommend that you take this quiz once a month to track if there are any
+                changes in your routine.
+            </p>
+        </div>
+        <div id='question-container'>
+            <div id='question'>Question</div>
+            <div id='answer-buttons'>
+                <button class='answer-btn'>Answer 1</button>
+                <button class='answer-btn'>Answer 2</button>
+                <button class='answer-btn'>Answer 3</button>
+            </div>
+        </div>
+        <div class='controls'>
+            <button id='start-btn'>Begin</button>
+            <button id='next-btn'>Next</button>
+            <p><a href="javascript:history.back()">Return to Previous Question</a></p>
+        </div>
     </div>
 </body>
 
