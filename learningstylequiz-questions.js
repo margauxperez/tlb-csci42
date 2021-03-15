@@ -12,7 +12,9 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
+        
     },
     {
         question: 'I prefer to see information written on the board and supplemented by visual aids and assigned readings.',
@@ -28,7 +30,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I like to write things down or take notes for visual review.',
@@ -44,7 +47,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I prefer to use posters, models, or actual practice and other activities in class.',
@@ -60,7 +64,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I require explanations of diagrams, graphs, or visual directions.',
@@ -76,7 +81,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     },
     {
         question: 'I enjoy working with my hands or making things.',
@@ -92,7 +98,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I am skillful with and enjoy developing and making graphs and charts.',
@@ -108,7 +115,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I can tell if sounds match when presented with pairs of sounds.',
@@ -124,7 +132,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     },
     {
         question: 'I can remember best by writing things down.',
@@ -140,7 +149,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I can easily understand and follow directions on a map.',
@@ -156,7 +166,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I do best in academic subjects by listening to lectures and tapes.',
@@ -172,7 +183,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     },
     {
         question: 'I play with coins or keys in my pocket.',
@@ -188,7 +200,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I learn to spell better by repeating words out loud than by writing the words on paper.',
@@ -204,7 +217,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     },
     {
         question: 'I can understand a news article better by reading about it in a newspaper than by listening to a report about it on the radio.',
@@ -220,7 +234,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I chew gum or snack while studying.',
@@ -236,7 +251,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I think the best way to remember something is to picture it in your head.',
@@ -252,7 +268,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I learn the spelling of words by “finger spelling” them.',
@@ -268,7 +285,9 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
+        
     },
     {
         question: 'I would rather listen to a good lecture or speech than read about the same material in a textbook.',
@@ -284,7 +303,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     },
     {
         question: 'I am good at working and solving jigsaw puzzles and mazes.',
@@ -300,7 +320,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: 'I grip objects in my hands during learning periods.',
@@ -316,7 +337,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I prefer listening to the news on the radio rather than reading the paper',
@@ -332,7 +354,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     },
     {
         question: 'I prefer obtaining information about an interesting subject by reading about it.',
@@ -348,7 +371,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'visual'
     },
     {
         question: ' I feel very comfortable touching others, hugging, handshaking, etc.',
@@ -364,7 +388,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'tactile'
     },
     {
         question: 'I follow oral directions better than written ones.',
@@ -380,7 +405,8 @@ const questions = [{
                 text: 'Often',
                 value: 5
             }
-        ]
+        ],
+        learningstyle: 'auditory'
     }
 
 ]
