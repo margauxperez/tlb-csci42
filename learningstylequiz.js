@@ -2,6 +2,7 @@ const learningSQInstructions = document.getElementById('lsq-instructions')
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const resultButton = document.getElementById('result-btn')
+const doneButton = document.getElementById('done-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -21,27 +22,6 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 resultButton.addEventListener('click', gameResult)
-
-//this function is limited for the moment as it shows only one result in case of ties
-function gameResult() {
-    questionContainerElement.classList.add('hide')
-    answerButtonsElement.classList.add('hide')
-    resultButton.classList.add('hide')
-
-    resultContainerElement.classList.remove('hide')
-    const learningstyleScore = Math.max(visualScore, auditoryScore, tactileScore);
-    if (learningstyleScore == visualScore){
-        console.log('visual learner')
-        visualLearnerElement.classList.remove('hide')
-    } else if (learningstyleScore == auditoryScore) {
-        console.log('auditory learner')
-        auditoryLearnerElement.classList.remove('hide')
-    } else if (learningstyleScore == tactileScore) {
-        console.log('tactile learner')
-        tactileLearnerElement.classList.remove('hide')
-    }
-    console.log(learningstyleScore)
-}
 
 function startGame() {
     learningSQInstructions.classList.add('hide')
@@ -115,4 +95,26 @@ function selectAnswer(e) {
         // startButton.classList.remove('hide')
         resultButton.classList.remove('hide')
     }
+}
+
+//this function is limited for the moment as it shows only one result in case of ties
+function gameResult() {
+    questionContainerElement.classList.add('hide')
+    answerButtonsElement.classList.add('hide')
+    resultButton.classList.add('hide')
+
+    resultContainerElement.classList.remove('hide')
+    const learningstyleScore = Math.max(visualScore, auditoryScore, tactileScore);
+    if (learningstyleScore == visualScore) {
+        console.log('visual learner')
+        visualLearnerElement.classList.remove('hide')
+    } else if (learningstyleScore == auditoryScore) {
+        console.log('auditory learner')
+        auditoryLearnerElement.classList.remove('hide')
+    } else if (learningstyleScore == tactileScore) {
+        console.log('tactile learner')
+        tactileLearnerElement.classList.remove('hide')
+    }
+    console.log(learningstyleScore)
+    doneButton.classList.remove('hide')
 }
