@@ -1,9 +1,14 @@
 const learningSQInstructions = document.getElementById('lsq-instructions')
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const resultButton = document.getElementById('result-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const resultContainerElement = document.getElementById('result-container')
+const visualLearnerElement = document.getElementById('visual-learner')
+const auditoryLearnerElement = document.getElementById('auditory-learner')
+const tactileLearnerElement = document.getElementById('tactile-learner')
 
 let questionsList, currentQuestionIndex
 let visualScore = 0,
@@ -15,6 +20,28 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
+resultButton.addEventListener('click', gameResult)
+
+//this function is limited for the moment as it shows only one result in case of ties
+function gameResult() {
+    questionContainerElement.classList.add('hide')
+    answerButtonsElement.classList.add('hide')
+    resultButton.classList.add('hide')
+
+    resultContainerElement.classList.remove('hide')
+    const learningstyleScore = Math.max(visualScore, auditoryScore, tactileScore);
+    if (learningstyleScore == visualScore){
+        console.log('visual learner')
+        visualLearnerElement.classList.remove('hide')
+    } else if (learningstyleScore == auditoryScore) {
+        console.log('auditory learner')
+        auditoryLearnerElement.classList.remove('hide')
+    } else if (learningstyleScore == tactileScore) {
+        console.log('tactile learner')
+        tactileLearnerElement.classList.remove('hide')
+    }
+    console.log(learningstyleScore)
+}
 
 function startGame() {
     learningSQInstructions.classList.add('hide')
@@ -81,10 +108,11 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide')
 
     } else {
-        startButton.innerText = 'Restart'
         console.log("Visual:" + visualScore)
         console.log("Auditory:" + auditoryScore)
         console.log("Tactile:" + tactileScore)
-        startButton.classList.remove('hide')
+        // startButton.innerText = 'Restart'
+        // startButton.classList.remove('hide')
+        resultButton.classList.remove('hide')
     }
 }
