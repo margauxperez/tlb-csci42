@@ -16,14 +16,14 @@ let visualScore = 0,
     auditoryScore = 0,
     tactileScore = 0
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startQuiz)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-resultButton.addEventListener('click', gameResult)
+resultButton.addEventListener('click', quizResult)
 
-function startGame() {
+function startQuiz() {
     learningSQInstructions.classList.add('hide')
     startButton.classList.add('hide')
     questionsList = questions.sort(() => Math.random() - .5)
@@ -91,6 +91,9 @@ function selectAnswer(e) {
         console.log("Visual:" + visualScore)
         console.log("Auditory:" + auditoryScore)
         console.log("Tactile:" + tactileScore)
+        if (selectedButton != null) {
+            answerButtonsElement.classList.add('hide')
+        }
         // startButton.innerText = 'Restart'
         // startButton.classList.remove('hide')
         resultButton.classList.remove('hide')
@@ -98,7 +101,7 @@ function selectAnswer(e) {
 }
 
 //this function is limited for the moment as it shows only one result in case of ties
-function gameResult() {
+function quizResult() {
     questionContainerElement.classList.add('hide')
     answerButtonsElement.classList.add('hide')
     resultButton.classList.add('hide')
