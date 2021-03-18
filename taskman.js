@@ -24,6 +24,7 @@ for (i = 0; i < del.length; i++) {
 }
 
 // Add a "checked" symbol when clicking on a list item
+//This is based on Dataflair's tutorial found on https://data-flair.training/blogs/javascript-project-to-do-list/
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -60,3 +61,4 @@ function addTask(){
       }
     }
 }
+
