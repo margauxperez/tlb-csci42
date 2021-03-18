@@ -1,3 +1,4 @@
+// This code group contains lines that get the element from the html file through id.
 const learningSQInstructions = document.getElementById('lsq-instructions')
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
@@ -11,18 +12,25 @@ const visualLearnerElement = document.getElementById('visual-learner')
 const auditoryLearnerElement = document.getElementById('auditory-learner')
 const tactileLearnerElement = document.getElementById('tactile-learner')
 
+// This instantiates variables used in this file.
 let questionsList, currentQuestionIndex
 let visualScore = 0,
     auditoryScore = 0,
     tactileScore = 0
 
+// This allows the start button from the html page to run a function called startQuiz.
 startButton.addEventListener('click', startQuiz)
+
+// This allows the next button from the html page to count the questions displayed and run the setNextQuestion function.
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
+
+// This allows the 'See My Result' button from the html page to run a function called quizResult.
 resultButton.addEventListener('click', quizResult)
 
+// This function initiates the quiz by hiding the instructions and showing the first question.
 function startQuiz() {
     learningSQInstructions.classList.add('hide')
     startButton.classList.add('hide')
@@ -32,11 +40,13 @@ function startQuiz() {
     setNextQuestion()
 }
 
+// This function sets the next question for the quiz.
 function setNextQuestion() {
     resetState()
     showQuestion(questionsList[currentQuestionIndex])
 }
 
+// This function shows the question and the answer choices.
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
@@ -53,6 +63,7 @@ function showQuestion(question) {
     })
 }
 
+// This function resets the answer buttons.
 function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
@@ -60,6 +71,7 @@ function resetState() {
     }
 }
 
+// This function determines the selected answer and its assigned value to be added to the learning style score variables.
 function selectAnswer(e) {
     const selectedButton = e.target
     const value = selectedButton.dataset.value
@@ -94,13 +106,15 @@ function selectAnswer(e) {
         if (selectedButton != null) {
             answerButtonsElement.classList.add('hide')
         }
-        // startButton.innerText = 'Restart'
-        // startButton.classList.remove('hide')
         resultButton.classList.remove('hide')
     }
 }
 
-//this function is limited for the moment as it shows only one result in case of ties
+// This function displays the result of the user after completing all the questions.
+// This only shows the highest score, and so in the case of ties, where it is unlikely 
+// given that the questions are contradicting, the tied learning style scores will follow
+// the hierarchy of: visual, auditory, and tactile.
+
 function quizResult() {
     questionContainerElement.classList.add('hide')
     answerButtonsElement.classList.add('hide')

@@ -2,20 +2,29 @@
 <html>
 
 <head>
+    <!-- This references to learningstylequiz.css as this html page's stylesheet. -->
     <link href="learningstylequiz.css" rel="stylesheet">
+
+    <!-- This references to the javaScript files used in this html page. -->
     <script defer src="learningstylequiz.js"></script>
     <script defer src="learningstylequiz-questions.js"></script>
+
     <title>Learning Style Quiz– The Learning Buddy</title>
 </head>
 
 <body>
+    <!-- This code group contains the feature heading and details for the Learning Style Quiz. -->
     <div class='feature-heading'>
         <h1>Learning Style Quiz</h1>
         <div>
             <p>Improve your study habits as you determine your learning style.</p>
         </div>
     </div>
+
+    <!-- This code group holds the contents of the quiz. -->
     <div>
+
+        <!-- This code group contains the instructions before taking the quiz. -->
         <div id='lsq-instructions'>
             <p>In taking this test, The Learning Buddy - Learning Style Quiz will assess your study habits based on
                 how you approach different studying scenarios. Based on the scenario, indicate it you seldom,
@@ -24,6 +33,8 @@
                 changes in your routine.
             </p>
         </div>
+
+        <!-- This code group contains the questions and answer choices of the quiz. -->
         <div id='question-container' class='hide'>
             <div id='question'>Question</div>
             <div id='answer-buttons'>
@@ -32,14 +43,20 @@
                 <button class='answer-btn'>Answer 3</button>
             </div>
         </div>
+
+        <!-- This code group shows the result of the user after taking the quiz. -->
         <div id='result-container' class='hide'>
             <p>After completing the quiz, we found out that you are a:</p>
+
+            <!-- This code group shows the description for visual learners. -->
             <div id='visual-learner' class='hide'>
                 <h2>visual learner.</h2>
                 <p>As a visual learner, you like drawing, doodling, making posters and using colors to
                     think rather than using words when studying. Visual learners learn
                     best by using images, pictures, colors, computers and any other visual media to help them learn.</p>
                 <h3>Here are The Learning Buddy Recommendations for Visual Learners</h3>
+
+                <!-- This code group contains the recommendations for visual learners. -->
                 <div id='visual-recommendations'>
                     <p id='recommendation'>Take notes, make pictures, graphs, and charts. Use flashcards and highlight
                         key details.</p>
@@ -59,12 +76,16 @@
                         quick visual review</p>
                 </div>
             </div>
+
+            <!-- This code group shows the description for auditory learners. -->
             <div id='auditory-learner' class='hide'>
                 <h2>auditory learner.</h2>
                 <p>As an auditory learner, you learn by hearing and listening. You understand and remember things you
                     have heard. You store information by the way it sounds, and you have an easier time understanding
                     spoken instructions than written ones.</p>
                 <h3>Here are The Learning Buddy Recommendations for Auditory Learners</h3>
+
+                <!-- This code group contains the recommendations for auditory learners. -->
                 <div id='auditory-recommendations'>
                     <p id='recommendation'>Say aloud the information to be learned/have someone read the information to
                         you/read it into a tape recorder and replay it.</p>
@@ -79,6 +100,8 @@
                     <p id='recommendation'>Tape class lectures (Ask instructor for permission).</p>
                     <p id='recommendation'>Meet with classmates before and/or after class to discuss material.</p>
                 </div>
+
+                <!-- This code group shows the description for tactile learners. -->
                 <div id='tactile-learner' class='hide'>
                     <h2>auditory learner.</h2>
                     <p>As an a tactile learner, you learn by touching and doing. You understand and remember things
@@ -86,44 +109,40 @@
                         draw what you learn, and you tend to learn better when some type of physical activity is
                         involved.</p>
                     <h3>Here are The Learning Buddy Recommendations for Tactile Learners</h3>
+
+                    <!-- This code group contains the recommendations for tactile learners. -->
                     <div id='tactile-recommendations'>
                         <p id='recommendation'>Keep your desk clear of distracting objects.</p>
                         <p id='recommendation'>Cover the page you’re not reading.</p>
                         <p id='recommendation'>If you are distracted by noise, turn off the radio; wear earplugs or wear
-                            an
-                            earphone in the learning center to block out the noise. If you want sound, listen to
+                            an earphone in the learning center to block out the noise. If you want sound, listen to
                             soft music.</p>
                         <p id='recommendation'>Divide your work into short study sessions. Get a timer. After 20 minutes
-                            or when
-                            a task is completed, give yourself a reward, a cookie, a wlak around the block,
+                            or when a task is completed, give yourself a reward, a cookie, a wlak around the block,
                             listen to one song, etc.</p>
                         <p id='recommendation'>Sit as close to the teacher as possible, or sit in the center of the room
-                            by quiet
-                            students.</p>
+                            by quiet students.</p>
                         <p id='recommendation'> When studying, use a multi-sensory approach (hearing, seeing, touching
-                            and
-                            doing) as much as possible.</p>
+                            and doing) as much as possible.</p>
                         <p id='recommendation'>Get plenty of sleep.</p>
                         <p id='recommendation'>Eat a nutritious breakfast and lunch. Snack on fruit or nutritional food
-                            if you need
-                            extra energy.</p>
+                            if you need extra energy.</p>
                         <p id='recommendation'> Study in a space or in an office where there is a desk for your text
-                            books and
-                            notebook.</p>
+                            books and notebook.</p>
                         <p id='recommendation'>Use models, real objects, and materials that can be touched and moved.
-                            For
-                            example, learn geography through handling and studying a globe.</p>
+                            For example, learn geography through handling and studying a globe.</p>
                         <p id='recommendation'>When possible draw what you are learning.</p>
                         <p id='recommendation'> Trace spelling words as you practice them.</p>
                         <p id='recommendation'>Record in writing information learned. Keep a supply of paper on hand.
                         </p>
                         <p id='recommendation'>When possible, role play, type, take notes, or construct models to learn
-                            the
-                            information. </p>
+                            the information. </p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- This code group contains the controls to be displayed in navigating the quiz. -->
         <div class='controls'>
             <button id='start-btn' class='start-btn'>Begin</button>
             <button id='next-btn' class='next-btn hide'>Next</button>
