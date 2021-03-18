@@ -30,10 +30,10 @@
     <p>Let us know what you think about TLB.</p>
 
     <div class='form-group'>
-        <form method='POST'>
+        <form class='feedback-form' method='POST'>
             <label for='suggestions' id='label'>Your Suggestions/Comments</label>
             <br>
-            <textarea rows="5" cols="150" placeholder="I think The Learning Buddy..."></textarea>
+            <textarea rows="5" cols="150" placeholder="I think The Learning Buddy..." class='suggestions'></textarea>
             <br>
             <button type='submit' id='submit-button'>Submit</button>
     </div>
@@ -41,6 +41,9 @@
     <div id='status' class='sent hide'>
         Sent Feedback
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+    <script src="feedback.js"></script>
+
 </body>
 
 </html>
