@@ -11,22 +11,31 @@ firebase.initializeApp(firebaseConfig);
 
 let feedbackInfo = firebase.database().ref('feedback')
 
+const widget = document.querySelector(".star-widget");
+
+let rating = 0
+
 document.querySelector(".feedback-form").addEventListener("submit", submitForm);
 
 function submitForm(e) {
     e.preventDefault();
 
-    //   Get input Values
-    let feedback = document.querySelector(".suggestions").value;
-    console.log(feedback);
+    let feedback = document.querySelector(".suggestions").value
 
-    saveFeedbackInfo(feedback);
+    let value = document.querySelector('input[name="rating"]:checked').value;
+
+    console.log(feedback);
+    console.log(value);
+
+    saveFeedbackInfo(value, feedback);
+    document.getElementById('feedback-form').reset();
 }
 
-function saveFeedbackInfo (feedback) {
+function saveFeedbackInfo(value, feedback) {
     let newFeedbackInfo = feedbackInfo.push()
 
     newFeedbackInfo.set({
-        feedback: feedback
+        feedback: feedback,
+        rating: value
     })
 }
