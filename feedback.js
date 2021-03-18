@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 let feedbackInfo = firebase.database().ref('feedback')
 
 const widget = document.querySelector(".star-widget");
+const sentElement = document.getElementById('status')
 
 let rating = 0
 
@@ -29,6 +30,7 @@ function submitForm(e) {
 
     saveFeedbackInfo(value, feedback);
     document.getElementById('feedback-form').reset();
+    sentElement.classList.remove('hide')
 }
 
 function saveFeedbackInfo(value, feedback) {
