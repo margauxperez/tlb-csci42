@@ -28,7 +28,7 @@
     outline: 100;
     background: transparent;
     border-bottom: 2px solid black;
-    width: 500px;
+    width: 600px;
     margin: 60px;
     font-size: 16px;
   }
@@ -37,16 +37,13 @@
     border-color: blue;
   }
 
-
   /* Style the "Add" button */
   .addbtn {
-    padding: 10px;
-    width: 25%;
-    margin: 0;
+    padding: 0;
+    margin: 0px;
     background: #d9d9d9;
     color: #555;
-    /*text-align: center;*/
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
@@ -65,7 +62,7 @@
     position: relative;
     padding: 50px 8px 50px 40px;
     border-bottom-width: 40;
-    margin: 0 50px 70px 50px;
+    margin: 0 350px 70px 350px;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
