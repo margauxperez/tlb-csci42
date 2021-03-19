@@ -1,25 +1,30 @@
 <html>
-    <head>
-        <title> The Learning Buddy </title>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
 
-        <script src = "signup.js"> </script>
-    </head>
+<head>
+    <title> The Learning Buddy </title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+
+    <script src="signup.js"> </script>
+</head>
 
 <body>
 
-<h1> The Learning Buddy </h1>
-<div id = "formContainer">
-    <div id = "header"> </div>
-<input type = "email" placeholder = "email" id = "email"/>
-<input type = "password" placeholder = "password" id = "password"/>
-<button onclick = "signUp()" id = "signUp"> Sign Up </button>
-<button onclick = "signIn()" id = "signIn"> Sign In </button>
-<button onclick = "signOut()" id = "signOut"> Sign Out </button>
+    <h1> The Learning Buddy </h1>
+    <div id = "formContainer">
+        <div id = "header"> </div>
 
-</div>
+
+            <input type="email" placeholder="email" id="email" />
+            <input type="password" placeholder="password" id="password" />
+            <button onclick="signUp()" id="signUp"> Sign Up </button>
+            <button onclick="signIn()" id="logIn"> Login </button>
+            <button onclick="signOut()" id="signOut"> Sign Out </button>
+
+        </form>
+
+    </div>
 
 
 
