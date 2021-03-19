@@ -33,10 +33,6 @@
     font-size: 16px;
   }
 
-  input:focus {
-    border-color: blue;
-  }
-
   /* Style the "Add" button */
   .addbtn {
     padding: 0;
