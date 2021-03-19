@@ -16,45 +16,23 @@ function signUp() {
 
   var email = document.getElementById("email");
   var password = document.getElementById("password");
-  function ValidateEmail(email)
-{
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if(inputText.value.match(mailformat))
-{
 
-const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-promise.catch(e => alert(e.message));
-
-alert("Signed Up");
-
-window.location.href = "index.html";
-
-}     
-else
-{
-alert("You have entered an invalid email address!");
-document.form1.text1.focus();
-return false;
-}
-}
-  
-//   if (email.value === '' || email.value === null || password.value === '' || password.value === null) {
+if (email.value === '' || email.value === null || password.value === '' || password.value === null) {
     
-//     alert("Error: Please Input Email/Password");
+    alert("Error: Please Input Email/Password");
   
+} else {
 
-// } else {
+    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+         promise.catch(e => alert(e.message));
 
-//     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-//     promise.catch(e => alert(e.message));
+     alert("Signed Up");
 
-//     alert("Signed Up");
+    window.location.href = "index.html";
+  }
+ }
 
-//     window.location.href = "index.html";
-//   }
-// }
-
-function signIn() {
+function logIn() {
 
   var email = document.getElementById("email");
   var password = document.getElementById("password");
@@ -67,7 +45,7 @@ function signIn() {
 
   const promise = auth.signInWithEmailAndPassword(email.value, password.value);
   promise.catch(e => alert(e.message));
-  alert("Signed In " + email.value);
+  alert("Logged In " + email.value);
 
    window.location.href = "index.html";
   }
