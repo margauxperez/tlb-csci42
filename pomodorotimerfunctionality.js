@@ -20,7 +20,7 @@ var startTimer;
 
 start.addEventListener('click', function(){ // start button. will work on hiding it after clicking
     if(startTimer === undefined){
-        startTimer = setInterval(timer, 5)
+        startTimer = setInterval(timer, 1000)
     } else {
         alert("Timer is already running");
     }
