@@ -10,23 +10,25 @@
     <h1>Pomodoro Timer</h1>
     
 
-    <div class = "clock">
+    <div id = "container">
 
-        <div class = "minutes"> 0 </div> 
-        <div> : </div>
-        <div class = "seconds"> 00 </div>
+        <p id="work" class="label">Work:</p>
+        <p id="break" class="label">Break:</p>
+
+        <!--Work Timer-->
+        <div id="mainTimer" class="timer">
+            <p id="minutes">25</p>
+            <p class="semicolon">:</p>
+            <p id="seconds">00</p>
+        </div>
 
         <!--audio src = "insert link here"> </audio-->
-    </div>
 
-    <div class = "buttons">
-        <button class = "start"> start </button>
-        <button class = "reset"> reset </button>
-        <button class = "pause"> pause </button>
+        <button id="start" class="btn">Start</button>
+        <button id="pause" class="btn">Pause</button>
+        <button id="reset" class="btn">Reset</button>
     </div>
-
-    <script src = "pomodorosettings.js"></script>
-    <script src = "pomodorotimerfunctionality.js"></script>
+    <script src="pomodorotimerfunctionality.js"></script>
 
 </body>
 

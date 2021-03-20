@@ -1,56 +1,46 @@
-/*
+var start = document.getElementById('start');
+var pause = document.getElementById('pause');
+var reset = document.getElementById('reset');
 
-const el = document.querySelector(".clock");
-/*const bell = document.querySelector("audio");
-const minutesdiv = document.querySelector(".minutes");
-const secondsdiv = document.querySelector(".seconds");
-const startButton = document.querySelector (".start");
+var minutes = document.getElementById('minutes');
+var seconds = document.getElementById('seconds');
 
-localStorage.setItem("status", "currentlyStudying");
+//store a reference to a timer variable
+var startTimer;
 
-let initial, totalSeconds, paused, minutes, seconds;
+start.addEventListener('click', function(){
+    if(startTimer === undefined){
+        startTimer = setInterval(timer, 1000)
+    } else {
+        alert("Timer is already running");
+    }
+})
 
-startButton.addEventListener("click", () => {
-	
-	let status = localStorage.getItem("status");
+reset.addEventListener('click', function(){
+    minutes.innerText = 25;
+    seconds.innerText = "00";
+    stopInterval()
+    startTimer = undefined;
+})
 
-	if status === "currentlyStudying" {
-		minutes =+localStorage.getItem("studyTime");
-	} else {
-		minutes =+localStorage.getItem("breakTime"); 
-	}
+pause.addEventListener('click', function(){
+    stopInterval()
+    startTimer = undefined;
+})
 
-	seconds = minutes*60;
-	totalSeconds = minutes*60;
-	setTimeout(decremenT(), 60);
-	startButton.style.transform ="scale(0)"
-	paused = false;
-});
 
-function decremenT() {
-	minutesdiv.textContent = Math.floor(seconds/60);
-	secondsdiv.textContent = seconds % 60 > 9 ? seconds % 60 : '0${seconds % 60}';
-
-	if (seconds > 0) {
-		seconds--;
-		initial = window.setTimeout("decremenT()", 1000);
-	} else {
-		mins = 0;
-		secs = 0;
-		/*bell.play()
-	}
-
-	if status === "currentlyStudying" {
-		startButton.textContent = "Start break";
-		startButton.classList.add("break");
-		localStorage.setItem("status", "currentlyOnBreak")
-	} else {
-		startButton.classList.remove("currentlyOnBreak")
-		startButton.textContent = "Start studying";
-		localStorage.setItem("status", "currentlyStudying")
-	}
-
-	startButton.style.transform = "scale(1)"
+//Start Timer Function
+function timer() {
+    //Work Timer Countdown
+    if(seconds.innerText != 0){
+        seconds.innerText--;
+    } else if(minutes.innerText != 0 && seconds.innerText == 0){
+        seconds.innerText = 59;
+        minutes.innerText--;
+    }
 }
 
-*/
+//Stop Timer Function
+function stopInterval(){
+    clearInterval(startTimer);
+}
