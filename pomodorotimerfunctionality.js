@@ -5,24 +5,26 @@ var reset = document.getElementById('reset');
 var minutes = document.getElementById('minutes');
 var seconds = document.getElementById('seconds');
 
+var caption = document.getElementById('caption');
+
 var workMinutes = 25;
 var workSeconds = 0;
 var breakMinutes = 5;
 var breakSeconds = 0;
 var counter = 0;
 
-//store a reference to a timer variable
 var startTimer;
 
 start.addEventListener('click', function(){
     if(startTimer === undefined){
-        startTimer = setInterval(timer, 10)
+        startTimer = setInterval(timer, 1000)
     } else {
         alert("Timer is already running");
     }
 })
 
 reset.addEventListener('click', function(){
+    caption.innerText = "Press start to begin!"
     minutes.innerText = 25;
     seconds.innerText = "00";
     workMinutes = 25;
@@ -34,6 +36,7 @@ reset.addEventListener('click', function(){
 })
 
 pause.addEventListener('click', function(){
+    caption.innerText = "Press start to resume!"
     stopInterval()
     startTimer = undefined;
 })
@@ -44,6 +47,7 @@ function timer() {
 
     //Work Timer Countdown
     if(workSeconds != 0){
+        caption.innerText = "It's time to work!"
         workSeconds--;
         seconds.innerText = workSeconds;
     } else if(workMinutes != 0 && workSeconds == 0){
@@ -55,6 +59,7 @@ function timer() {
     
     //Break Timer Countdown
     if(workMinutes == 0 && workSeconds == 0){
+        caption.innerText = "It's time for a break!"
         if (breakSeconds != 0) {
             breakSeconds--;
             seconds.innerText = breakSeconds;
