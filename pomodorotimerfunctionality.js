@@ -62,6 +62,7 @@ function timer() {
         workSeconds--;
         seconds.innerText = workSeconds;
     } else if(workMinutes != 0 && workSeconds == 0){
+        caption.innerText = "It's time to work!"
         workSeconds = 59;
         workMinutes--;
         seconds.innerText = workSeconds;
