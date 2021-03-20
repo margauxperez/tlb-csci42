@@ -53,4 +53,15 @@ calcQPI.addEventListener("click", () => {
         sumOfProductOfSumOfNumberOfUnitsAndLetterMarks += productOfSumOfNumberOfUnitsAndLetterMarks;
     });
 
+    const tr = document.createElement('tr');
+
+    tdTotalNumberOfUnits = document.createElement('td');
+    tdTotalNumberOfUnits.innerHTML = `Your Total Number Of Units is ${sumOfNumberOfUnits}`;
+
+    tdQPI = document.createElement('td');
+    tdQPI.innerHTML = `your QPI is ${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
+
+    tr.appendChild(tdTotalNumberOfUnits);
+    tr.appendChild(tdQPI);
+    tfoot.appendChild(tr);
 })
