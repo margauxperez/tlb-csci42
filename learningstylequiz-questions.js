@@ -1,3 +1,5 @@
+// This javaScript file contains the questions, answer values, and assigned learning style type per question.
+
 const questions = [{
         question: 'I can remember best by listening to a lecture that includes information, explanations and discussions.',
         answers: [{
