@@ -4,6 +4,8 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <!-- This group references to the favicons to be used when TLB is used on different devices. -->
     <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png'>
     <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png'>
     <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png'>
@@ -21,41 +23,54 @@
     <meta name='msapplication-TileColor' content='#ffffff'>
     <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
     <meta name='theme-color' content='#ffffff'>
+
+    <!-- This references to feedback.css as this html page's stylesheet. -->
     <link href="feedback.css" rel="stylesheet">
     <title>Send Feedback— The Learning Buddy</title>
 </head>
 
 <body>
+    <!-- main heading -->
     <h1>Send Feedback</h1>
     <p>Let us know what you think about TLB.</p>
 
+    <!-- This div contains the form fields such as the rating radio buttons, text area for feedback, and submit button. -->
     <div class='form-group'>
         <form class='feedback-form' method='POST' id='feedback-form'>
-                <span class="rating">
-                  <input type="radio" id="rating-5" name="rating" value="5"  checked="checked" />
-                  <label for="rating-5">5</label>
-                  <input type="radio" id="rating-4" name="rating" value="4" />
-                  <label for="rating-4">4</label>
-                  <input type="radio" id="rating-3" name="rating" value="3" />
-                  <label for="rating-3">3</label>
-                  <input type="radio" id="rating-2" name="rating" value="2" />
-                  <label for="rating-2">2</label>
-                  <input type="radio" id="rating-1" name="rating" value="1" />
-                  <label for="rating-1">1</label>
-                  <input type="radio" id="rating-0" name="rating" value="0" class="rating-clear" />
-                  <label for="rating-0">0</label>
-                </span>
+
+            <!-- This code group is for the radio buttons. -->
+            <span class="rating">
+                <input type="radio" id="rating-5" name="rating" value="5" checked="checked" />
+                <label for="rating-5">5</label>
+                <input type="radio" id="rating-4" name="rating" value="4" />
+                <label for="rating-4">4</label>
+                <input type="radio" id="rating-3" name="rating" value="3" />
+                <label for="rating-3">3</label>
+                <input type="radio" id="rating-2" name="rating" value="2" />
+                <label for="rating-2">2</label>
+                <input type="radio" id="rating-1" name="rating" value="1" />
+                <label for="rating-1">1</label>
+                <input type="radio" id="rating-0" name="rating" value="0" class="rating-clear" />
+                <label for="rating-0">0</label>
+            </span>
             <br>
+
+            <!-- This code group is for the text area for the feedback. -->
             <label for='suggestions' id='label'>Your Suggestions/Comments</label>
             <br>
             <textarea rows="5" cols="150" placeholder="I think The Learning Buddy..." class='suggestions'></textarea>
             <br>
+
             <button type='submit' id='submit-button'>Submit</button>
+        </form>
     </div>
-    </form>
+
+    <!-- This div displays a text indicating that the feedback has been sent after clicking the submit button. -->
     <div id='status' class='hide'>
         Sent Feedback
     </div>
+
+    <!-- This lines references to the Firebase and javaScript files used. -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
     <script src="feedback.js"></script>
 
