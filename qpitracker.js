@@ -63,6 +63,9 @@ calcQPI.addEventListener("click", () => {
 
     tr.appendChild(tdTotalNumberOfUnits);
     tr.appendChild(tdQPI);
+    if(tfoot.querySelector("tr") !== null){
+        tfoot.querySelector("tr").remove();
+    }
     tfoot.appendChild(tr);
 
 });
@@ -75,7 +78,7 @@ clear.addEventListener("click", () => {
     }
     
 
-    table.classList.add("dispaly-none");
-    calcQPI.classList.add("dispaly-none");
-    clear.classList.add("dispaly-none");
+    table.classList.add("display-none");
+    calcQPI.classList.add("display-none");
+    clear.classList.add("display-none");
 })
