@@ -3,6 +3,7 @@ const courseCode = document.querySelector("#course-code");
 const numberOfUnits = document.querySelector("#number-of-units");
 const letterMark = document.querySelector("#letter-mark");
 const tbody = document.querySelector("#tbody");
+const tfoot = document.querySelector("#tfoot");
 const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
@@ -40,4 +41,16 @@ add.addEventListener("click", () =>
         letterMark.selectedIndex = "0";
     }
     
+})
+
+calcQPI.addEventListener("click", () => {
+    let sumOfNumberOfUnits = 0, productOfSumOfNumberOfUnitsAndLetterMarks = 0,
+    sumOfProductOfSumOfNumberOfUnitsAndLetterMarks = 0;
+
+    QPIArray.forEach(result => {
+        sumOfNumberOfUnits += parseInt(result.numberOfUnits);
+        productOfSumOfNumberOfUnitsAndLetterMarks = parseInt(result.numberOfUnits) * parseInt(result.letterMark);
+        sumOfProductOfSumOfNumberOfUnitsAndLetterMarks += productOfSumOfNumberOfUnitsAndLetterMarks;
+    });
+
 })
