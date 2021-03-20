@@ -7,22 +7,31 @@ const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
 
-add.addEventListener("click", () => {
-    const tr = document.createElement("tr");
-    const tdCourseCode = document.createElement("td");
-    tdCourseCode.innerHTML = courseCode.value;
-    const tdNumberOfUnits = document.createElement("td");
-    tdNumberOfUnits.innerHTML = numberOfUnits.value;
-    const tdLetterMark = document.createElement("td");
-    tdLetterMark.innerHTML = letterMark.options[letterMark.selectedIndex].text;
-    tr.appendChild(tdCourseCode);
-    tr.appendChild(tdNumberOfUnits);
-    tr.appendChild(tdLetterMark);
-    tbody.appendChild(tr);
-    table.classList.remove("display-none");
-    calcQPI.classList.remove("display-none");
-    clear.classList.remove("display-none");
-    courseCode.value = "";
-    numberOfUnits.value = "";
-    letterMark.selectedIndex = "0";
+add.addEventListener("click", () => 
+{
+    if (courseCode.value === "" || numberOfUnits.value <= 0 || letterMark.selectedIndex === 0)
+    {
+        alert("Please input the right values.")
+    } 
+    else 
+    {
+        const tr = document.createElement("tr");
+        const tdCourseCode = document.createElement("td");
+        tdCourseCode.innerHTML = courseCode.value;
+        const tdNumberOfUnits = document.createElement("td");
+        tdNumberOfUnits.innerHTML = numberOfUnits.value;
+        const tdLetterMark = document.createElement("td");
+        tdLetterMark.innerHTML = letterMark.options[letterMark.selectedIndex].text;
+        tr.appendChild(tdCourseCode);
+        tr.appendChild(tdNumberOfUnits);
+        tr.appendChild(tdLetterMark);
+        tbody.appendChild(tr);
+        table.classList.remove("display-none");
+        calcQPI.classList.remove("display-none");
+        clear.classList.remove("display-none");
+        courseCode.value = "";
+        numberOfUnits.value = "";
+        letterMark.selectedIndex = "0";
+    }
+    
 })
