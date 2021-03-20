@@ -18,9 +18,9 @@ var cyclesCounter = 0;
 
 var startTimer;
 
-start.addEventListener('click', function(){
+start.addEventListener('click', function(){ // start button. will work on hiding it after clicking
     if(startTimer === undefined){
-        startTimer = setInterval(timer, 1000)
+        startTimer = setInterval(timer, 5)
     } else {
         alert("Timer is already running");
     }
@@ -31,7 +31,7 @@ reset.addEventListener('click', function(){ //resets everything completely
 
     minutes.innerText = 25;
     seconds.innerText = "00";
-    //cycles.innerText = 0;
+    //cycles.innerText = 0; //for testing purposes
 
     workMinutes = 25;
     workSeconds = 0;
@@ -40,11 +40,13 @@ reset.addEventListener('click', function(){ //resets everything completely
     longBreakMinutes = 15;
     longBreakSeconds = 0;
     cyclesCounter = 0;
+
+
     stopInterval()
     startTimer = undefined;
 })
 
-pause.addEventListener('click', function(){
+pause.addEventListener('click', function(){ // pause button. will work on hiding this by default until the timer starts running.
     caption.innerText = "Press start to resume!"
     stopInterval()
     startTimer = undefined;
@@ -96,7 +98,7 @@ function timer() {
         breakMinutes = 5;
         breakSeconds = 0;
         cyclesCounter++;
-        //cycles.innerText = cyclesCounter;
+        //cycles.innerText = cyclesCounter; //for testing purposes
         seconds.innerText = workSeconds;
         minutes.innerText = workMinutes;
     }
@@ -107,7 +109,7 @@ function timer() {
         longBreakMinutes = 15;
         longBreakSeconds = 0;
         cyclesCounter = 0;
-        //cycles.innerText = cyclesCounter;
+        //cycles.innerText = cyclesCounter; //for testing purposes
         seconds.innerText = workSeconds;
         minutes.innerText = workMinutes;
     }
