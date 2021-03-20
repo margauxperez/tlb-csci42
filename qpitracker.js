@@ -48,8 +48,8 @@ calcQPI.addEventListener("click", () => {
     sumOfProductOfSumOfNumberOfUnitsAndLetterMarks = 0;
 
     QPIArray.forEach(result => {
-        sumOfNumberOfUnits += parseInt(result.numberOfUnits);
-        productOfSumOfNumberOfUnitsAndLetterMarks = parseInt(result.numberOfUnits) * parseInt(result.letterMark);
+        sumOfNumberOfUnits += parseFloat(result.numberOfUnits);
+        productOfSumOfNumberOfUnitsAndLetterMarks = parseFloat(result.numberOfUnits) * parseFloat(result.letterMark);
         sumOfProductOfSumOfNumberOfUnitsAndLetterMarks += productOfSumOfNumberOfUnitsAndLetterMarks;
     });
 
