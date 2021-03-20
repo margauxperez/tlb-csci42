@@ -6,6 +6,7 @@ const tbody = document.querySelector("#tbody");
 const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
+let QPIArray = [];
 
 add.addEventListener("click", () => 
 {
@@ -29,6 +30,11 @@ add.addEventListener("click", () =>
         table.classList.remove("display-none");
         calcQPI.classList.remove("display-none");
         clear.classList.remove("display-none");
+        QPIArray.push
+        ({
+            "numberOfUnits": numberOfUnits.value, 
+            "letterMark": letterMark.options[letterMark.selectedIndex].value,
+        });
         courseCode.value = "";
         numberOfUnits.value = "";
         letterMark.selectedIndex = "0";
