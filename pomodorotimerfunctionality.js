@@ -4,6 +4,7 @@ var reset = document.getElementById('reset');
 
 var minutes = document.getElementById('minutes');
 var seconds = document.getElementById('seconds');
+var cycles = document.getElementById('cycles');
 
 var caption = document.getElementById('caption');
 
@@ -11,7 +12,9 @@ var workMinutes = 25;
 var workSeconds = 0;
 var breakMinutes = 5;
 var breakSeconds = 0;
-var counter = 0;
+var longBreakMinutes = 15;
+var longBreakSeconds = 0;
+var cyclesCounter = 0;
 
 var startTimer;
 
@@ -55,32 +58,41 @@ function timer() {
         workMinutes--;
         seconds.innerText = workSeconds;
         minutes.innerText = workMinutes;
+    } else if(workMinutes == 0 && workSeconds == 0){ //Break Timer Countdown
+        if (cyclesCounter < 3) {
+            caption.innerText = "It's time for a break!"
+            if (breakSeconds != 0) {
+                breakSeconds--;
+                seconds.innerText = breakSeconds;
+            } else if (breakMinutes != 0 && breakSeconds == 0){
+                breakSeconds = 59;
+                breakMinutes --;
+                seconds.innerText = breakSeconds;
+                minutes.innerText = breakMinutes;
+            }
+        } else {
+            caption.innerText = "It's time for a long break!"
+            if (longBreakSeconds != 0) {
+                longBreakSeconds--;
+                seconds.innerText = longBreakSeconds;
+            } else if (longBreakMinutes != 0 && longBreakSeconds == 0){
+                longBreakSeconds = 59;
+                longBreakMinutes --;
+                seconds.innerText = longBreakSeconds;
+                minutes.innerText = longBreakMinutes;
+            }
+        }
     } 
     
-    //Break Timer Countdown
-    if(workMinutes == 0 && workSeconds == 0){
-        caption.innerText = "It's time for a break!"
-        if (breakSeconds != 0) {
-            breakSeconds--;
-            seconds.innerText = breakSeconds;
-        } else if (breakMinutes != 0 && breakSeconds == 0){
-            breakSeconds = 59;
-            breakMinutes --;
-            seconds.innerText = breakSeconds;
-            minutes.innerText = breakMinutes;
-        }
-    }
-
-    //Increment Counter by one if one full cycle is completed
-    if(workMinutes == 0 && workSeconds == 0 && breakMinutes == 0 && breakSeconds == 0){
+    if(workMinutes == 0 && workSeconds == 0 && breakMinutes == 0 && breakSeconds == 0){ //Timer reset
         workMinutes = 25;
         workSeconds = 0;
         breakMinutes = 5;
         breakSeconds = 0;
-        counter++;
+        cyclesCounter++;
+        cycles.innerText = cyclesCounter;
         seconds.innerText = workSeconds;
         minutes.innerText = workMinutes;
-        
     }
 }
 
