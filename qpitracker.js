@@ -22,4 +22,7 @@ add.addEventListener("click", () => {
     table.classList.remove("display-none");
     calcQPI.classList.remove("display-none");
     clear.classList.remove("display-none");
+    courseCode.value = "";
+    numberOfUnits.value = "";
+    letterMark.selectedIndex = "0";
 })
