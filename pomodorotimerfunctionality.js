@@ -26,14 +26,20 @@ start.addEventListener('click', function(){
     }
 })
 
-reset.addEventListener('click', function(){
+reset.addEventListener('click', function(){ //resets everything completely 
     caption.innerText = "Press start to begin!"
+
     minutes.innerText = 25;
     seconds.innerText = "00";
+    //cycles.innerText = 0;
+
     workMinutes = 25;
     workSeconds = 0;
     breakMinutes = 5;
     breakSeconds = 0;
+    longBreakMinutes = 15;
+    longBreakSeconds = 0;
+    cyclesCounter = 0;
     stopInterval()
     startTimer = undefined;
 })
@@ -90,7 +96,18 @@ function timer() {
         breakMinutes = 5;
         breakSeconds = 0;
         cyclesCounter++;
-        cycles.innerText = cyclesCounter;
+        //cycles.innerText = cyclesCounter;
+        seconds.innerText = workSeconds;
+        minutes.innerText = workMinutes;
+    }
+
+    if(workMinutes == 0 && workSeconds == 0 && longBreakMinutes == 0 && longBreakSeconds == 0){ //Timer reset
+        workMinutes = 25;
+        workSeconds = 0;
+        longBreakMinutes = 15;
+        longBreakSeconds = 0;
+        cyclesCounter = 0;
+        //cycles.innerText = cyclesCounter;
         seconds.innerText = workSeconds;
         minutes.innerText = workMinutes;
     }
