@@ -70,7 +70,10 @@ calcQPI.addEventListener("click", () => {
 clear.addEventListener("click", () => {
     QPIArray = [];
     tbody.querySelectorAll("*").forEach(child => child.remove());
-    tfoot.querySelector("tr").remove();
+    if(tfoot.querySelector("tr") !== null){
+        tfoot.querySelector("tr").remove();
+    }
+    
 
     table.classList.add("dispaly-none");
     calcQPI.classList.add("dispaly-none");
