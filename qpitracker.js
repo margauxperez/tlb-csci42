@@ -1,3 +1,5 @@
+// Sourced from: https://www.youtube.com/watch?v=oEm_POQszcg
+
 const add = document.querySelector("#add");
 const courseCode = document.querySelector("#course-code");
 const numberOfUnits = document.querySelector("#number-of-units");
