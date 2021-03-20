@@ -64,4 +64,15 @@ calcQPI.addEventListener("click", () => {
     tr.appendChild(tdTotalNumberOfUnits);
     tr.appendChild(tdQPI);
     tfoot.appendChild(tr);
+
+});
+
+clear.addEventListener("click", () => {
+    QPIArray = [];
+    tbody.querySelectorAll("*").forEach(child => child.remove());
+    tfoot.querySelector("tr").remove();
+
+    table.classList.add("dispaly-none");
+    calcQPI.classList.add("dispaly-none");
+    clear.classList.add("dispaly-none");
 })
