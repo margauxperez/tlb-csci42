@@ -1,3 +1,21 @@
+// This code group initialized the Firebase connection for The Learning Buddy.
+
+var firebaseConfig = {
+    apiKey: "AIzaSyBTPfcNxrT2RJxbCmkladp0ntQEh2UuONs",
+    authDomain: "the-learning-buddy-66812.firebaseapp.com",
+    databaseURL: "https://the-learning-buddy-66812-default-rtdb.firebaseio.com",
+    projectId: "the-learning-buddy-66812",
+    storageBucket: "the-learning-buddy-66812.appspot.com",
+    messagingSenderId: "835249560127",
+    appId: "1:835249560127:web:36b8a29df26129227d768a"
+  };
+  
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// This sorts the data coming from learningstylequiz.html to be under the "learning-style" category in the database.
+let learningStyleInfo = firebase.database().ref('learningstyle')
+
 // This code group contains lines that get the element from the html file through id.
 const learningSQInstructions = document.getElementById('lsq-instructions')
 const startButton = document.getElementById('start-btn')
@@ -16,7 +34,8 @@ const tactileLearnerElement = document.getElementById('tactile-learner')
 let questionsList, currentQuestionIndex
 let visualScore = 0,
     auditoryScore = 0,
-    tactileScore = 0
+    tactileScore = 0,
+    learningstyle= ''
 
 // This allows the start button from the html page to run a function called startQuiz.
 startButton.addEventListener('click', startQuiz)
@@ -124,14 +143,30 @@ function quizResult() {
     const learningstyleScore = Math.max(visualScore, auditoryScore, tactileScore);
     if (learningstyleScore == visualScore) {
         console.log('visual learner')
+        learningStyle = 'visual learner'
         visualLearnerElement.classList.remove('hide')
     } else if (learningstyleScore == auditoryScore) {
         console.log('auditory learner')
+        learningStyle = 'auditory learner'
         auditoryLearnerElement.classList.remove('hide')
     } else if (learningstyleScore == tactileScore) {
         console.log('tactile learner')
+        learningStyle = 'tactile learner'
         tactileLearnerElement.classList.remove('hide')
     }
     console.log(learningstyleScore)
+
+    saveFeedbackInfo(learningstyleScore, learningstyle);
+
     doneButton.classList.remove('hide')
+}
+
+// This function saves the inputted values in rating and feedback fields in the form to Firebase.
+function saveFeedbackInfo(learningstyleScore, learningstyle) {
+    let newLearningStyleInfo = learningStyleInfo.push()
+
+    newLearningStyleInfo.set({
+        learningstyleScore: learningstyleScore,
+        learningstyle: learningStyle
+    })
 }
