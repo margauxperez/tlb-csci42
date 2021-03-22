@@ -9,7 +9,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 const auth = firebase.auth();
 
 function signUp() {
@@ -17,20 +16,26 @@ function signUp() {
   var email = document.getElementById("email");
   var password = document.getElementById("password");
 
-if (email.value === '' || email.value === null || password.value === '' || password.value === null) {
-    
+  if (email.value === '' || email.value === null || password.value === '' || password.value === null) {
+
     alert("Error: Please Input Email/Password");
-  
-} else {
+
+  } else if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value)) {
 
     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-         promise.catch(e => alert(e.message));
+    promise.catch(e => alert(e.message));
 
-     alert("Signed Up");
+    alert("Signed Up");
 
     window.location.href = "index.html";
+
+  } else {
+
+    alert("You have entered an invalid email address!");
+
   }
- }
+
+}
 
 function logIn() {
 
@@ -38,17 +43,28 @@ function logIn() {
   var password = document.getElementById("password");
 
 
-  if (email.value === '' || email.value === null || password.value === '' || password.value === null){
+  if (email.value === '' || email.value === null || password.value === '' || password.value === null) {
 
     alert("Error Please Input Email/Password");
-  }else{
 
-  const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-  promise.catch(e => alert(e.message));
-  alert("Logged In " + email.value);
+   } //else if {
 
-   window.location.href = "index.html";
+  // }
+  
+  else if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value)) {
+
+    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+    promise.catch(e => alert(e.message));
+    alert("Logged In " + email.value);
+
+    window.location.href = "index.html";
+
+  } else {
+
+    alert("You have entered an invalid email address!");
+
   }
+
 }
 
 function signOut() {
