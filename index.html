@@ -24,7 +24,9 @@
     <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
     <meta name='theme-color' content='#ffffff'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:ital,wght@0,600;0,700;1,300&display=swap"
+        rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
 
@@ -33,7 +35,10 @@
 
 <body>
     <div id='side-nav'>
-        <div id='logo-full'><h2 id='logo'>TLB</h2><h2 id='logo-dot'>.</h2></div>
+        <div id='logo-full'>
+            <h2 id='logo'>TLB</h2>
+            <h2 id='logo-dot'>.</h2>
+        </div>
         <img src='resources/nav-radial.png' id='nav-accent'>
         <div id='upper-side-nav'>
             <div id='side-nav-option'>
@@ -68,18 +73,42 @@
         <h1>Let's get studying!</h1>
         <p>Hey buddy, make the most out of your study schedules through our productivity and organization tools just for
             you. </p>
-        <div id='tool-card'>
-            <a href='learningstylequiz.html'>Learning Style Quiz</a>
+        <div id='tools'>
+
+            <div id='tool-card' style='background-color: #FBA76B;'>
+                <a href='learningstylequiz.html'>
+                    <div id='card-content'>
+                        <h4>Learning Style Quiz</h4>
+                        <p id='card-detail'>Be more efficient when studying by knowing what learning style works for
+                            you.</p>
+                        <br>
+                        <img src='/resources/lsq-card.png' style='width: 100%;'>
+                    </div>
+                </a>
+            </div>
+
+            <a href='qpitracker.html'>
+                <div id='tool-card' style='background-color: #FA7D7C;'>
+                    <div id='card-content'>
+                        <h4>QPI Tracker</h4>
+                        <p id='card-detail'>Keep track of your #acadgoals by monitoring your grades.</p>
+                        <br><br>
+                        <img src='/resources/qpi-card.png' style='width: 100%;'>
+                    </div>
+            </a>
         </div>
-        <div id='tool-card'>
-            <a href='qpitracker.html'>QPI Tracker</a>
-        </div>
-        <div id='tool-card'>
-            <a href='pomodorotimer.html'>Pomodoro Timer</a>
-        </div>
-        <div id='tool-card'>
-            <a href='taskmanagement.html'>Task Management</a>
-        </div>
+
+        <a href='pomodorotimer.html'>
+            <div id='tool-card' style='background-color: #5E72EB;'>
+                <div id='card-content'>
+                    <h4>Pomodoro Timer</h4>
+                    <p id='card-detail'>Feeling unmotivated? Get a small part of your task done under 20 minutes.</p>
+                    <br>
+                    <img src='/resources/clock-card.png' style='width: 100%;'>
+                </div>
+        </a>
+    </div>
+    </div>
     </div>
     <div id='right-side-panel'>
         <div id='account-name'>
@@ -99,11 +128,18 @@
             </div>
             <a id='tag' href='#'>Add a new Task</a>
         </div>
+        <img src='resources/main-radial.png' id='main-radial'>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 

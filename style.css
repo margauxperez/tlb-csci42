@@ -1,17 +1,22 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding:0;
+    padding: 0;
     display: center;
-  }
+}
+
+html {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
 
 #logo-full {
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #logo {
     font-family: 'Work Sans' !important;
-    font-weight: bold  !important;
+    font-weight: bold !important;
     color: #0D0745;
     padding: 6px 0px 6px 32px;
     display: inline;
@@ -20,7 +25,7 @@
 }
 
 #logo-dot {
-    font-family: 'Alfa Slab One' ;
+    font-family: 'Alfa Slab One';
     display: inline;
     margin: 0;
     padding: 0;
@@ -33,8 +38,31 @@ a {
     display: inline;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 img {
     display: inline;
+}
+
+h1 {
+    font-family: 'Work Sans' !important;
+    font-weight: bold !important;
+    color: #0D0745;
+    padding-left: 24px;
+}
+
+h4 {
+    font-family: 'Work Sans' !important;
+    font-weight: semibold !important;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+p {
+    font-size: 14px;
+    padding-left: 24px;
 }
 
 #side-nav {
@@ -48,21 +76,21 @@ img {
     overflow-x: hidden;
     padding-top: 20px;
     box-shadow: 0px 4px 16px rgba(13, 7, 69, 0.25);
-  }
-  
-  #side-nav a {
+}
+
+#side-nav a {
     padding: 6px 32px 6px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #130D6F;
     display: block;
-  }
-  
-  #side-nav a:hover {
+}
+
+#side-nav a:hover {
     color: #5E72EB;
-  }
-  
-  #nav-accent {
+}
+
+#nav-accent {
     position: absolute;
     width: 50%;
     left: 0%;
@@ -70,24 +98,73 @@ img {
     top: 8.27%;
     bottom: 58.65%;
     z-index: 9999;
-  }
+}
 
-  #lower-side-nav {
+#lower-side-nav {
     padding-top: 120px;
     text-align: right;
-  }
+}
 
-  #upper-side-nav {
+#upper-side-nav {
     padding-top: 80px;
     text-align: right;
-  }
+}
 
-  #main {
-    margin-left: 240px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
+#main {
+    margin-left: 240px;
+    width: 800px;
+    padding-left: 32px;
+    padding-top: 120px;
+}
+
+#tools {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 24px;
+}
+
+#tool-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 3200px;
+    margin: 0 i !important;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+#tool-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+#card-content a {
+    padding: 6px 16px;
+    color: #FEFEFE;
+    font-family: 'Work Sans';
+    font-weight: semibold;
+    font-size: 24px !important;
+    text-decoration: none !important;
+}
+
+#card-content {
+    padding-top: 24px;
+    color: #FEFEFE;
+}
+
+#card-detail {
+    color: #FEFEFE;
+    padding-right: 24px;
+}
+
+#main-radial {
+    height: 700px;
+    width: 600px;
+    left: 746px;
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+}
 
 .hide {
     display: none;
-  }
+}
