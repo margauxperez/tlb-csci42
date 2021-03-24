@@ -11,7 +11,7 @@ html {
 }
 
 #logo-full {
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 #logo {
@@ -55,7 +55,7 @@ h1 {
 
 h4 {
     font-family: 'Work Sans' !important;
-    font-weight: semibold !important;
+    font-weight: 600 !important;
     padding-left: 24px;
     padding-right: 24px;
 }
@@ -114,6 +114,7 @@ p {
     margin-left: 240px;
     width: 800px;
     padding-left: 32px;
+    padding-right: 32px;
     padding-top: 120px;
 }
 
@@ -159,12 +160,93 @@ p {
 #main-radial {
     height: 700px;
     width: 600px;
-    left: 746px;
+    left: 740px;
     top: 0px;
     position: absolute;
-    z-index: -1;
+    z-index: -999;
 }
 
 .hide {
     display: none;
+}
+
+#right-side-panel {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 80px;
+    padding-right: 60px;
+}
+
+#account-name {
+    font-family: 'Work Sans';
+    line-height: 0;
+    font-weight: bold;
+    text-align: right;
+    color: #4D62E2;
+}
+
+#account-email {
+    font-family: 'Work Sans';
+    line-height: 0;
+    font-weight: 300;
+    text-align: right;
+    color: #4D62E2;
+}
+
+#date-time {
+    background-color: #FEFEFE;
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+#date-time p {
+    padding: 0;
+    line-height: 0;
+    color: #0D0745;
+}
+
+#time {
+    font-family: 'Work Sans';
+    font-weight: bold;
+    font-size: 32px;
+    color: #0D0745;
+    padding-bottom: 16px !important;
+}
+
+#todo-list {
+    background-color: #FEFEFE;
+    text-align: justify;
+    border-radius: 8px;
+    padding: 16px 16px 16px 16px;
+    ;
+}
+
+#todo-list-heading {
+    font-family: 'Work Sans';
+    font-weight: bold;
+    font-size: 32px;
+    color: #0D0745;
+    padding-bottom: 16px !important;
+    padding-right: 32px;
+}
+
+#todo-list a{
+    font-weight: bold;
+    color: #5E72EB;
+    text-align: center;
+}
+
+#view-all {
+    padding-left: 16px;
+    font-weight: normal !important;
 }
