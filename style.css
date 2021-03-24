@@ -204,7 +204,7 @@ p {
     background-color: #FEFEFE;
     text-align: center;
     border-radius: 8px;
-    padding-top: 32px;
+    padding-top: 16px;
     padding-bottom: 8px;
     margin-bottom: 24px;
 }
@@ -218,9 +218,9 @@ p {
 #time {
     font-family: 'Work Sans';
     font-weight: bold;
-    font-size: 32px;
+    font-size: 40px;
     color: #0D0745;
-    padding-bottom: 16px !important;
+    padding-bottom: 8px !important;
 }
 
 #todo-list {

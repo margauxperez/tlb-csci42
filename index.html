@@ -27,13 +27,42 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
         rel="stylesheet">
+    
+    <!-- This references style.css as the stylesheet to be used for this page. -->
     <link href="style.css" rel="stylesheet">
 
+    <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
+    <script>
+        function startTime() {
+            const month= ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+            var d = today.getDate();
+            var y = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            document.getElementById('day').innerHTML = weekday[today.getDay()];
+            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
 
     <title>Home— The Learning Buddy</title>
 </head>
 
-<body>
+<body onload='startTime()'>
+
+    <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
         <div id='logo-full'>
             <h2 id='logo'>TLB</h2>
@@ -69,12 +98,15 @@
             </div>
         </div>
     </div>
+
+    <!-- This code group contains the main content of the homepage. -->
     <div id='main'>
         <h1>Let's get studying!</h1>
         <p>Hey buddy, make the most out of your study schedules through our productivity and organization tools just for
             you. </p>
         <div id='tools'>
 
+            <!-- This is the card for the learning style quiz. -->
             <div id='tool-card' style='background-color: #FBA76B;'>
                 <a href='learningstylequiz.html'>
                     <div id='card-content'>
@@ -87,6 +119,7 @@
                 </a>
             </div>
 
+            <!-- This is the card for the QPI tracker. -->
             <a href='qpitracker.html'>
                 <div id='tool-card' style='background-color: #FA7D7C;'>
                     <div id='card-content'>
@@ -98,6 +131,7 @@
             </a>
         </div>
 
+        <!-- This is the card for the pomodoro timer. -->
         <a href='pomodorotimer.html'>
             <div id='tool-card' style='background-color: #5E72EB;'>
                 <div id='card-content'>
@@ -110,6 +144,8 @@
     </div>
     </div>
     </div>
+
+    <!-- This code group contains the account, time, and to-do list divs for the right panel. -->
     <div id='right-side-panel'>
         <div id='account-name'>
             <p id='account-name'>account name</p>
@@ -118,9 +154,9 @@
         </div>
         <br><br>
         <div id='date-time'>
-            <p id='time'>time</p>
-            <p id='day'>day</p>
-            <p id='date'>date</p>
+            <div id='time'>time</div>
+            <p id='day' style='font-weight: bold;'>day</p>
+            <p id='date'></p>
         </div>
         <div id='todo-list'>
             <div>
@@ -133,6 +169,7 @@
         </div>
     </div>
 
+    <!-- The following lines are used in the Bootstrap implementation. -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -142,6 +179,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
     <img src='resources/main-radial.png' id='main-radial'>
 </body>
 
