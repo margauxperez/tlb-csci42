@@ -16,7 +16,7 @@ The Learning Buddy is a web application that contains five different tools that 
 *  **The Pomodoro Technique** - https://todoist.com/productivity-methods/pomodoro-technique
 
 ## Operating Environment
-The developers of The Learning Buddy will use HTML, CSS, and Javascript for front-end development and Firebase for back-end development. It can run on MacOS and Windows.
+The developers of The Learning Buddy will use HTML, CSS, and Javascript with and Firebase. It can run on MacOS and Windows.
 
 ## Github Workflow
 [Very helpful interactive tutorial on the Git workflow](https://learngitbranching.js.org/)
