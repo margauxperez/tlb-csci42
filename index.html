@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style='overflow-y: hidden !important;'>
 
 <head>
     <!-- This code group references to the favicon and Google fonts used. -->
@@ -148,21 +148,26 @@
                     <img src='/resources/clock-card.png' style='width: 100%;'>
                 </div>
         </a>
-        
+
     </div>
     </div>
     </div>
-    <div id="bottom-card"> 
+    <div id="bottom-card">
         <a href='taskmanagement.html'>
-        <div id='taskman-card' style='background-color: #996BFB;'>
-            <div id='taskman-content'>
-                <h4>Task Management</h4>
-                <p id='task-detail'>Stay aligned with your tasks of the day by creating a to-do list.</p>
+            <div id='taskman-card' style='background-color: #996BFB;'>
+                <div id='card-content' class='row' style='padding-top: 0;'>
+                    <div class='col' style='padding-top: 24px;'>
+                    <h4>Task Management</h4>
+                    <p id='card-detail'>Stay aligned with your tasks of the day by creating a to-do list.</p>
+                </div>
+                <div class='col'>
+                    <img src='/resources/task-card.png' style='width: 50%;'>
+                </div>
+                </div>
             </div>
-        </div>
         </a>
     </div>
-   
+
 
 
     <!-- This code group contains the account, time, and to-do list divs for the right panel. -->
@@ -178,34 +183,29 @@
             <p id='day' style='font-weight: bold;'>day</p>
             <p id='date'></p>
         </div>
-        <!--<div id='todo-list'>
+        <!-- <div id='todo-list'>
             <div>
                 <h2 id='todo-list-heading' style='display: inline;'>to-do</h2>
                 <a id='view-all' href='taskmanagement.html'>view all</a>
                 <br>
                 <br><br>
             </div>
-<<<<<<< HEAD
             <a id='tag' href='taskmanagement.html'> <img src='resources/plus.png'> Add a new Task</a>
-        </div>
-=======
-            <a id='tag' href='#'> <img src='resources/plus.png'> Add a new Task</a>
-        </div>-->
->>>>>>> 0d35c6d438bac49171e789652339d06edfbcbe71
+        </div> -->
     </div>
 
     <!-- The following lines are used in the Bootstrap implementation. -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-    <img src='resources/main-radial.png' id='main-radial'>
+        <img src='resources/main-radial.png' id='main-radial'>
 </body>
 
 </html>

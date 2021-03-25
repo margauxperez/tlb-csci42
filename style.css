@@ -136,7 +136,7 @@ p {
     width: 800px;
     padding-left: 32px;
     padding-right: 32px;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
 #main-feature {
@@ -174,7 +174,7 @@ p {
     margin-left: 300px;
     padding-left: 32;
     padding-top: 25px;
-    padding-bottom: 9px;
+    padding-bottom: 64px;
 }
 
 #taskman-card {
@@ -226,7 +226,7 @@ p {
 }
 
 #main-radial {
-    height: 100%;
+    height: 110%;
     width: 100%;
     left: 740px;
     top: 0px;
