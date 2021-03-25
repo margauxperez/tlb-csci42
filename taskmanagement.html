@@ -5,14 +5,103 @@
     <link rel="stylesheet" type="text/css" href="taskmanstyle.css" />
 
 <head>
+    <!-- This references to style.css as this html page's stylesheet. -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- This group references to the favicons to be used when TLB is used on different devices. -->
+    <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png'>
+    <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png'>
+    <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png'>
+    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png'>
+    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png'>
+    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png'>
+    <link rel='manifest' href='/favicon/manifest.json'>
+    <meta name='msapplication-TileColor' content='#ffffff'>
+    <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
+    <meta name='theme-color' content='#ffffff'>
+
+    <!-- The following lines reference to the used Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
     <title>Task Management – The Learning Buddy</title>
 </head>
 
 <body>
-    <div id="todoheader" class="header">
+    <!-- This code group contains the side navigation options. -->
+    <div id='side-nav'>
+        <div id='logo-full'>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
+        </div>
+        <img src='resources/nav-radial.png' id='nav-accent'>
+        <div id='upper-side-nav'>
+            <div id='side-nav-option'>
+                <a href='pomodorotimer.html'>Pomodoro Timer</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='qpitracker.html'>QPI Calculator</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='learningstylequiz.html'>Learning Style Quiz</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='taskmanagement.html'>Task Management</a>
+            </div>
+        </div>
+        <div id='lower-side-nav'>
+            <div id='side-nav-option'>
+                <a href='#'>Help <img src='resources/help-circle.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='feedback.html'>Send Feedback <img src='resources/edit.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='#'>Settings <img src='resources/settings.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='#'>Sign Out <img src='resources/log-out.png'></a>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="todoheader" class="header">
         <button onclick="location.href='/index.html';" class="taskmanbackbtn">&larr;</button>
         <h1>To-Do List</h1>
-    </div>
+    </div>-->
+
+        <!-- This code group contains the feature heading and details for the Learning Style Quiz. -->
+        <div id='main-feature'>
+            <div class='feature-heading'>
+                <div class='row'>
+                    <div class='col'>
+                        <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0;'></a>
+                        <br><br>
+                        <h1><img src='resources/todolist.png' style='width: 10%; padding-right: 8px;'>Task Management</h1>
+                        <p>Stay aligned with your tasks by creating a to-do list.</p>
+                        <br><br>
+                    </div>
+    
+                    <div id='account-name' class='col'>
+                        <p id='account-name'>account name</p>
+                        <p id='account-email'>email</p>
+                        <img id='account-img' />
+                    </div>
+                </div>
+            </div>
 
     <style>
         .container {
@@ -32,6 +121,6 @@
         <li>Task #2</li>
         <li>Task #3</li>
     </ul>
-
+    <img src='resources/main-radial.png' id='main-radial'>
     <script src="taskman.js"></script>
 </body>

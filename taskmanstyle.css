@@ -28,9 +28,9 @@
     outline: 100;
     background: transparent;
     border-bottom: 2px solid black;
-    width: 600px;
-    margin: 60px;
-    font-size: 16px;
+    width: 500px;
+    margin: 30px;
+    font-size: 18px;
   }
 
   /* Style the "Add" button */
@@ -50,6 +50,12 @@
     background-color: #bbb;
     color: #FFF;
   }
+
+  .addbtn:active{
+    background-color: #bbb;
+    box-shadow: 0 5px #666;
+    transform: translateY(100px);
+  }
   
   /* This styles the tasks and the task borders*/
   ul li {
@@ -57,8 +63,8 @@
     cursor: pointer;
     position: relative;
     padding: 50px 8px 50px 40px;
-    border-bottom-width: 40;
-    margin: 0 350px 70px 350px;
+    border-bottom-width: 20px;
+    margin: 0 350px 40px 350px;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
