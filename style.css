@@ -6,7 +6,7 @@
 }
 
 html {
-    overflow-y: hidden !important;
+    overflow-y: auto;
     overflow-x: hidden !important;
 }
 
@@ -149,6 +149,44 @@ p {
 #tool-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
+}
+
+#bottom-card{
+    width: 680px;
+    height: 10px;
+    margin-left: 300px;
+    padding-left: 32;
+    padding-top: 25px;
+    padding-bottom: 9px;
+}
+
+#taskman-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 690px;
+    height: 120px;
+    margin: 0 i !important;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+#taskman-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+#taskman-content {
+    padding: 30px 10px;
+    color: #FEFEFE;
+    font-family: 'Work Sans';
+    font-weight: semibold;
+    font-size: 24px !important;
+    text-decoration: none !important;
+}
+
+#taskman-detail {
+    color: #FEFEFE;
+    padding-right: 24px;
 }
 
 #card-content a {
