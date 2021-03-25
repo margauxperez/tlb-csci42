@@ -62,7 +62,7 @@ Currently, the following files are included in this project:
 * taskmanstyle.css
 * README.md
           
-*favicon (folder)
+* favicon (folder)
     * this folder contains the favion icons and files
-*resources (folder)
+* resources (folder)
     * this folder contains icons and buttons
