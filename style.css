@@ -345,4 +345,5 @@ button {
 
 #status p{
     color: #5E72EB;
+    transform: translate(41%, -20%);
 }
