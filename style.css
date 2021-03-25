@@ -451,7 +451,7 @@ button {
     border-radius: 8px;
     border-width: 2px;
     border-style: solid;
-    padding: 56px 56px 56px 32px;
+    padding: 56px 56px 32px 56px;
     text-align: center;
     width: 80%;
     margin: auto;
@@ -468,4 +468,10 @@ button {
     font-family: 'Work Sans' !important;
     font-weight: bold !important;
     color: #4D62E2 !important;
+    padding: 0 !important;
+}
+
+#question-num{
+    padding: 0 !important;
+    color: #4D62E2;
 }
