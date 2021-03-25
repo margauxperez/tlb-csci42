@@ -16,7 +16,7 @@ The Learning Buddy is a web application that contains five different tools that 
 *  **The Pomodoro Technique** - https://todoist.com/productivity-methods/pomodoro-technique
 
 ## Operating Environment
-The developers of The Learning Buddy will use HTML, CSS, and Javascript for front-end development and PHP and Firebase for back-end development. It can run on MacOS and Windows.
+The developers of The Learning Buddy will use HTML, CSS, and Javascript for front-end development and Firebase for back-end development. It can run on MacOS and Windows.
 
 ## Github Workflow
 [Very helpful interactive tutorial on the Git workflow](https://learngitbranching.js.org/)
@@ -44,20 +44,25 @@ git log
 ## Files & directories (to be updated)
 Currently, the following files are included in this project:
 
+* feedback.html
+* feedback.js
 * index.html
-* pomodorotimer.html
 * learningstylequiz.html
 * learningstylequiz.css
 * learningstylequiz.js
+* pomodorotimer.html
+* pomodorofunctionality.js
+* qpitracker.html
+* qpitracker.js
+* signup.html
+* signup.js
+* style.css
 * taskmanagement.html
 * taskman.js
 * taskmanstyle.css
-* signup.html
-* signup.js
-* feedback.html
-* feedback.css
-* feedback.js
-* qpitracker.html
+* README.md
           
 *favicon (folder)
     * this folder contains the favion icons and files
+*resources (folder)
+    * this folder contains icons and buttons
