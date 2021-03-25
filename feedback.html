@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style='overflow-y: hidden;'>
 
 <head>
     <!-- This code group references to the favicon and Google fonts used. -->
@@ -104,6 +104,10 @@
             <form class='feedback-form' method='POST' id='feedback-form'>
                 <br><br>
 
+                <!-- This div displays a text indicating that the feedback has been sent after clicking the submit button. -->
+                <div id='status' class='hide'>
+                    <p><img src='resources\check-circle.png' style='width: 24px; padding-right: 8px;'><b>Feedback Sent</b></p>
+                </div>
                 <!-- This code group is for the radio buttons. -->
                 <div class="rating">
                     <input type="radio" id="rating-5" name="rating" value="5" />
@@ -124,10 +128,7 @@
                         class='suggestions'></textarea>
                 </div>
 
-                <!-- This div displays a text indicating that the feedback has been sent after clicking the submit button. -->
-                <div id='status' class='hide'>
-                    <p><img src='resources\check-circle.png' style='width: 24px; padding-right: 8px;'><b>Sent Feedback</b></p>
-                </div>
+
 
                 <button type='submit' id='submit-button'>SUBMIT</button>
 
@@ -138,7 +139,7 @@
     </div>
 
     <img src='resources/main-radial.png' id='main-radial'>
-    
+
     <!-- This lines references to the Firebase and javaScript files used. -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
     <script src="feedback.js"></script>

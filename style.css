@@ -439,7 +439,10 @@ button {
 
 #status p {
     color: #5E72EB;
-    transform: translate(41%, -20%);
+    position: absolute;
+    margin: auto;
+    padding: auto;
+    transform: translate(285%, -300%);
 }
 
 #quiz-contents {
