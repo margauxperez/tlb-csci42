@@ -32,14 +32,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
         rel="stylesheet">
-    
+
     <!-- This references style.css as the stylesheet to be used for this page. -->
     <link href="style.css" rel="stylesheet">
 
     <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
     <script>
         function startTime() {
-            const month= ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             var today = new Date();
             var d = today.getDate();
@@ -70,8 +70,10 @@
     <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
         <div id='logo-full'>
-            <h2 id='logo'>TLB</h2>
-            <h2 id='logo-dot'>.</h2>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
         </div>
         <img src='resources/nav-radial.png' id='nav-accent'>
         <div id='upper-side-nav'>
