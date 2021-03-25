@@ -7,22 +7,6 @@
 html {
   overflow-y: scroll !important;
 }
-  /* Styles the header */
-  .header {
-      background-color:transparent;
-      padding: 40px 40px;
-      color: black;
-      text-align: left;
-    }
-
-  h1 {
-    margin:0;
-    display:inline-block;
-    padding: 10px;
-  }
-  .taskmanbackbtn{
-    float: left;
-  }
 
    /* Style the input text field */
    input {
