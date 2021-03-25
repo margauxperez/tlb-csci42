@@ -6,7 +6,7 @@
 }
 
 html {
-    overflow-y: hidden !important;
+    overflow-y: auto;
     overflow-x: hidden !important;
 }
 
@@ -174,10 +174,6 @@ p {
 #taskman-detail {
     color: #FEFEFE;
     padding-right: 24px;
-}
-
-#test{
-
 }
 
 #card-content a {
