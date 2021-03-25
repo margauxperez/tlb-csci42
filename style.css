@@ -291,29 +291,6 @@ p {
     padding-bottom: 8px !important;
 }
 
-/*#todo-list {
-    background-color: #FEFEFE;
-    text-align: justify;
-    border-radius: 8px;
-    padding: 16px 16px 16px 16px;
-    ;
-}
-
-#todo-list-heading {
-    font-family: 'Work Sans';
-    font-weight: bold;
-    font-size: 32px;
-    color: #0D0745;
-    padding-bottom: 16px !important;
-    padding-right: 32px;
-}
-
-#todo-list a {
-    font-weight: bold;
-    color: #5E72EB;
-    text-align: center;
-}*/
-
 #view-all {
     padding-left: 16px;
     font-weight: normal !important;
