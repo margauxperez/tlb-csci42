@@ -269,7 +269,7 @@ p {
 }
 
 #date-time {
-    background-color: #FEFEFE;
+    background-color: #eee;
     text-align: center;
     border-radius: 8px;
     padding-top: 16px;
@@ -291,7 +291,7 @@ p {
     padding-bottom: 8px !important;
 }
 
-#todo-list {
+/*#todo-list {
     background-color: #FEFEFE;
     text-align: justify;
     border-radius: 8px;
@@ -312,7 +312,7 @@ p {
     font-weight: bold;
     color: #5E72EB;
     text-align: center;
-}
+}*/
 
 #view-all {
     padding-left: 16px;
