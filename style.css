@@ -226,7 +226,7 @@ p {
 }
 
 #main-radial {
-    height: 110%;
+    height:max-content;
     width: 100%;
     left: 740px;
     top: 0px;
