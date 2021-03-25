@@ -359,6 +359,15 @@ textarea {
 
 }
 
+#submit-button{
+    margin: auto;
+    padding: auto;
+    position: relative;
+    top: 50%;
+    left: 45%;
+    transform: translateY(-50%);
+}
+
 button {
     padding: 8px 16px;
     background-color: #130D6F;
