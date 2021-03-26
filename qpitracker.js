@@ -50,12 +50,6 @@ calcQPI.addEventListener("click", () => {
     let sumOfNumberOfUnits = 0, productOfSumOfNumberOfUnitsAndLetterMarks = 0,
     sumOfProductOfSumOfNumberOfUnitsAndLetterMarks = 0;
 
-    if (tbody.value === "" || courseCode.value === "" || numberOfUnits.value <= 0 || letterMark.selectedIndex === 0)
-    {
-        alert("Table is empty.")
-    } 
-    else 
-    {
     QPIArray.forEach(result => {
         sumOfNumberOfUnits += parseFloat(result.numberOfUnits);
         productOfSumOfNumberOfUnitsAndLetterMarks = parseFloat(result.numberOfUnits) * parseFloat(result.letterMark);
@@ -76,7 +70,7 @@ calcQPI.addEventListener("click", () => {
         tfoot.querySelector("tr").remove();
     }
     tfoot.appendChild(tr);
-}
+
 });
 
 clear.addEventListener("click", () => {
