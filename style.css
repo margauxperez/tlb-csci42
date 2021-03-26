@@ -132,11 +132,11 @@ p {
 }
 
 #main {
-    margin-left: 240px;
+    margin-left: 360px;
     width: 800px;
     padding-left: 32px;
     padding-right: 32px;
-    padding-top: 20px;
+    padding-top: 100px;
 }
 
 #main-feature {
@@ -171,7 +171,7 @@ p {
 #bottom-card{
     width: 680px;
     height: 10px;
-    margin-left: 300px;
+    margin-left: 420px;
     padding-left: 32;
     padding-top: 25px;
     padding-bottom: 64px;
@@ -225,14 +225,25 @@ p {
     padding-right: 24px;
 }
 
+
 #main-radial {
-    height:max-content;
+    min-height: 100%;
+    min-width: 1024px;
     width: 100%;
-    left: 740px;
-    top: 0px;
-    position: absolute;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: -999;
-}
+  }
+  
+  @media screen and (max-width: 1024px) {
+    #main-radial {
+      left: 50%;
+      margin-left: -512px;
+      z-index: -999;
+    }
+  }
 
 .hide {
     display: none;
@@ -442,7 +453,7 @@ button {
     position: absolute;
     margin: auto;
     padding: auto;
-    transform: translate(285%, -300%);
+    transform: translate(380%, -300%);
 }
 
 #quiz-contents {
