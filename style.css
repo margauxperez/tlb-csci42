@@ -490,6 +490,10 @@ button {
     border: none;
 }
 #tfoot {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    text-align: center;
     border: none;
 }
 
@@ -510,4 +514,20 @@ button {
     font-family: 'Work Sans' !important;
     font-weight: 600 !important;
     background-color: #5E72EB;
+}
+
+#tbody {
+    font-family: 'Work Sans' !important;
+}
+
+#course-code {
+    font-family: 'Work Sans' !important;
+}
+
+#number-of-units {
+    font-family: 'Work Sans' !important;
+}
+
+#letter-mark {
+    font-family: 'Work Sans' !important;
 }
