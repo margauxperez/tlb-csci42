@@ -64,13 +64,12 @@ calcQPI.addEventListener("click", () => {
     tdQPI = document.createElement('td');
     tdQPI.innerHTML = `${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
 
-    //tr.appendChild(tdTotalNumberOfUnits);
     tr.appendChild(tdQPI);
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
     }
     tfoot.appendChild(tr);
-
+  
 });
 
 clear.addEventListener("click", () => {
