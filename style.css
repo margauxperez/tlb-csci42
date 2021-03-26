@@ -493,3 +493,21 @@ button {
     border: none;
 }
 
+#calc-QPI {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    background-color: #0D0745;
+}
+
+#clear {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    background-color: #031B89;
+    color: white;
+}
+
+#add {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    background-color: #5E72EB;
+}
