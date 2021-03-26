@@ -2,8 +2,36 @@
 <html>
 
 <head>
-    <!-- This references to learningstylequiz.css as this html page's stylesheet. -->
-    <link href="learningstylequiz.css" rel="stylesheet">
+    <!-- This references to style.css as this html page's stylesheet. -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- This group references to the favicons to be used when TLB is used on different devices. -->
+    <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png'>
+    <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png'>
+    <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png'>
+    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png'>
+    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png'>
+    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png'>
+    <link rel='manifest' href='/favicon/manifest.json'>
+    <meta name='msapplication-TileColor' content='#ffffff'>
+    <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
+    <meta name='theme-color' content='#ffffff'>
+
+    <!-- The following lines reference to the used Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
 
     <!-- This references to the javaScript files used in this html page. -->
     <script defer src="learningstylequiz.js"></script>
@@ -13,102 +41,177 @@
 </head>
 
 <body>
-    <!-- This code group contains the feature heading and details for the Learning Style Quiz. -->
-    <div class='feature-heading'>
-        <h1>Learning Style Quiz</h1>
-        <div>
-            <p>Improve your study habits as you determine your learning style.</p>
+
+    <!-- This code group contains the side navigation options. -->
+    <div id='side-nav'>
+        <div id='logo-full'>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
+        </div>
+        <img src='resources/nav-radial.png' id='nav-accent'>
+        <div id='upper-side-nav'>
+            <div id='side-nav-option'>
+                <a href='pomodorotimer.html'>Pomodoro Timer</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='qpitracker.html'>QPI Calculator</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='learningstylequiz.html'>Learning Style Quiz</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='taskmanagement.html'>Task Management</a>
+            </div>
+        </div>
+        <div id='lower-side-nav'>
+            <div id='side-nav-option'>
+                <a href='#'>Help <img src='resources/help-circle.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='feedback.html'>Send Feedback <img src='resources/edit.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='#'>Settings <img src='resources/settings.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='#'>Sign Out <img src='resources/log-out.png'></a>
+            </div>
         </div>
     </div>
 
-    <!-- This code group holds the contents of the quiz. -->
-    <div>
+    <!-- This code group contains the feature heading and details for the Learning Style Quiz. -->
+    <div id='main-feature'>
+        <div class='feature-heading'>
+            <div class='row'>
+                <div class='col'>
+                    <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0;'></a>
+                    <br><br>
+                    <h1><img src='resources/lsq-icon.png' style='width: 11%; padding-right: 8px;'>Learning Style
+                        Quiz</h1>
+                    <p>Improve your study habits as you determine your learning style.</p>
+                </div>
 
-        <!-- This code group contains the instructions before taking the quiz. -->
-        <div id='lsq-instructions'>
-            <p>In taking this test, The Learning Buddy - Learning Style Quiz will assess your study habits based on
-                how you approach different studying scenarios. Based on the scenario, indicate it you seldom,
-                sometimes, or often do it. This will take at least 15 minutes to complete. Answer truthfully to get
-                the best results. We recommend that you take this quiz once a month to track if there are any
-                changes in your routine.
-            </p>
-        </div>
-
-        <!-- This code group contains the questions and answer choices of the quiz. -->
-        <div id='question-container' class='hide'>
-            <div id='question'>Question</div>
-            <div id='answer-buttons'>
-                <button class='answer-btn'>Answer 1</button>
-                <button class='answer-btn'>Answer 2</button>
-                <button class='answer-btn'>Answer 3</button>
+                <div id='account-name' class='col'>
+                    <p id='account-name'>account name</p>
+                    <p id='account-email'>email</p>
+                    <img id='account-img' />
+                </div>
             </div>
         </div>
 
-        <!-- This code group shows the result of the user after taking the quiz. -->
-        <div id='result-container' class='hide'>
-            <p>After completing the quiz, we found out that you are a:</p>
+        <!-- This code group holds the contents of the quiz. -->
+        <div id='quiz-contents'>
 
-            <!-- This code group shows the description for visual learners. -->
-            <div id='visual-learner' class='hide'>
-                <h2>visual learner.</h2>
-                <p>As a visual learner, you like drawing, doodling, making posters and using colors to
-                    think rather than using words when studying. Visual learners learn
-                    best by using images, pictures, colors, computers and any other visual media to help them learn.</p>
-                <h3>Here are The Learning Buddy Recommendations for Visual Learners</h3>
+            <!-- This code group contains the instructions before taking the quiz. -->
+            <div id='lsq-instructions'>
+                <h2 id='heading-lsq'>Instructions</h2>
+                <br><br>
+                <p>In taking this test, <b>The Learning Buddy - Learning Style Quiz</b> will assess your study habits
+                    based on
+                    how you approach different studying scenarios. Based on the scenario, indicate it you seldom,
+                    sometimes, or often do it. This will take <b>at least 15 minutes to complete</b>. Answer truthfully
+                    to get
+                    the best results. <br> <br> We recommend that you take this quiz once a month to track if there are
+                    any
+                    changes in your routine.
+                </p>
+            </div>
 
-                <!-- This code group contains the recommendations for visual learners. -->
-                <div id='visual-recommendations'>
-                    <p id='recommendation'>Take notes, make pictures, graphs, and charts. Use flashcards and highlight
-                        key details.</p>
-                    <p id='recommendation'>Sit close to the teacher so that you can watch his/her face and gestures.</p>
-                    <p id='recommendation'>Take notes or make lists as you listen to directions.</p>
-                    <p id='recommendation'>Carefully check instructions written on the chalkboard and on handouts.</p>
-                    <p id='recommendation'>Pay attention to visual aids such as drawings, maps, graphs, charts, posters,
-                        films, and books.</p>
-                    <p id='recommendation'>Imagine pictures of the information you are suppose to remember.</p>
-                    <p id='recommendation'>Use color coding as cues to important information.</p>
-                    <p id='recommendation'>When possible, read assignments silently.</p>
-                    <p id='recommendation'>Maintain class notes and outlines of important information to study.</p>
-                    <p id='recommendation'>Try to read and study in well lit, quiet place.</p>
-                    <p id='recommendation'>Record homework assignments in a date book, on a note pad, or a specially
-                        designed assignment sheet.</p>
-                    <p id='recommendation'>Keep a note pad with you at all times. Write out everything for frequent and
-                        quick visual review</p>
+            <!-- This code group contains the questions and answer choices of the quiz. -->
+            <div id='question-container' class='hide'>
+                <h2 id='question-num'>Question Number</h2>
+                <div id='question'>Question</div>
+                <br>
+                <div id='answer-buttons'>
+                    <button class='answer-btn'>Answer 1</button>
+                    <button class='answer-btn'>Answer 2</button>
+                    <button class='answer-btn' style='margin-right: 0 !important;'>Answer 3</button>
                 </div>
             </div>
 
-            <!-- This code group shows the description for auditory learners. -->
-            <div id='auditory-learner' class='hide'>
-                <h2>auditory learner.</h2>
-                <p>As an auditory learner, you learn by hearing and listening. You understand and remember things you
-                    have heard. You store information by the way it sounds, and you have an easier time understanding
-                    spoken instructions than written ones.</p>
-                <h3>Here are The Learning Buddy Recommendations for Auditory Learners</h3>
+            <!-- This code group shows the result of the user after taking the quiz. -->
+            <div id='result-container' class='hide'>
+                <p>After completing the quiz, we found out that you are a/an:</p>
 
-                <!-- This code group contains the recommendations for auditory learners. -->
-                <div id='auditory-recommendations'>
-                    <p id='recommendation'>Say aloud the information to be learned/have someone read the information to
-                        you/read it into a tape recorder and replay it.</p>
-                    <p id='recommendation'>Read your work out loud. Summarize what you have read on tape.</p>
-                    <p id='recommendation'>Say words inside your head silently.</p>
-                    <p id='recommendation'>Brainstorm ideas with others. Form study groups.</p>
-                    <p id='recommendation'>When possible, learn information through tapes, television, oral reports,
-                        rhymesand songs, radio, lectures, book reviews, panel and group discussions, guest
-                        lectures, and oral questions and answers.</p>
-                    <p id='recommendation'>Use a straight-edge marker or guide to assist you in keeping your place while
-                        you are reading or working with printed materials.</p>
-                    <p id='recommendation'>Tape class lectures (Ask instructor for permission).</p>
-                    <p id='recommendation'>Meet with classmates before and/or after class to discuss material.</p>
+                <!-- This code group shows the description for visual learners. -->
+                <div id='visual-learner' class='hide'>
+                    <h2>visual learner<h2 id='logo-dot'>.</h2>
+                    </h2>
+                    <p>As a visual learner, you like drawing, doodling, making posters and using colors to
+                        think rather than using words when studying. Visual learners learn
+                        best by using images, pictures, colors, computers and any other visual media to help them learn.
+                    </p>
+                    <h5>Here’s how you can build and improve your study habits:</h5>
+
+                    <!-- This code group contains the recommendations for visual learners. -->
+                    <div id='visual-recommendations'>
+                        <p id='recommendation'>Take notes, make pictures, graphs, and charts. Use flashcards and
+                            highlight
+                            key details.</p>
+                        <p id='recommendation'>Sit close to the teacher so that you can watch his/her face and gestures.
+                        </p>
+                        <p id='recommendation'>Take notes or make lists as you listen to directions.</p>
+                        <p id='recommendation'>Carefully check instructions written on the chalkboard and on handouts.
+                        </p>
+                        <p id='recommendation'>Pay attention to visual aids such as drawings, maps, graphs, charts,
+                            posters,
+                            films, and books.</p>
+                        <p id='recommendation'>Imagine pictures of the information you are suppose to remember.</p>
+                        <p id='recommendation'>Use color coding as cues to important information.</p>
+                        <p id='recommendation'>When possible, read assignments silently.</p>
+                        <p id='recommendation'>Maintain class notes and outlines of important information to study.</p>
+                        <p id='recommendation'>Try to read and study in well lit, quiet place.</p>
+                        <p id='recommendation'>Record homework assignments in a date book, on a note pad, or a specially
+                            designed assignment sheet.</p>
+                        <p id='recommendation'>Keep a note pad with you at all times. Write out everything for frequent
+                            and
+                            quick visual review</p>
+                        <br>
+                    </div>
+                </div>
+
+                <!-- This code group shows the description for auditory learners. -->
+                <div id='auditory-learner' class='hide'>
+                    <h2>auditory learner<h2 id='logo-dot'>.</h2>
+                    </h2>
+                    <p>As an auditory learner, you learn by hearing and listening. You understand and remember things
+                        you
+                        have heard. You store information by the way it sounds, and you have an easier time
+                        understanding
+                        spoken instructions than written ones.</p>
+                    <h5>Here’s how you can build and improve your study habits:</h5>
+
+                    <!-- This code group contains the recommendations for auditory learners. -->
+                    <div id='auditory-recommendations'>
+                        <p id='recommendation'>Say aloud the information to be learned/have someone read the information
+                            to
+                            you/read it into a tape recorder and replay it.</p>
+                        <p id='recommendation'>Read your work out loud. Summarize what you have read on tape.</p>
+                        <p id='recommendation'>Say words inside your head silently.</p>
+                        <p id='recommendation'>Brainstorm ideas with others. Form study groups.</p>
+                        <p id='recommendation'>When possible, learn information through tapes, television, oral reports,
+                            rhymesand songs, radio, lectures, book reviews, panel and group discussions, guest
+                            lectures, and oral questions and answers.</p>
+                        <p id='recommendation'>Use a straight-edge marker or guide to assist you in keeping your place
+                            while
+                            you are reading or working with printed materials.</p>
+                        <p id='recommendation'>Tape class lectures (Ask instructor for permission).</p>
+                        <p id='recommendation'>Meet with classmates before and/or after class to discuss material.</p>
+                        <br>
+                    </div>
                 </div>
 
                 <!-- This code group shows the description for tactile learners. -->
                 <div id='tactile-learner' class='hide'>
-                    <h2>auditory learner.</h2>
+                    <h2>tactile learner<h2 id='logo-dot'>.</h2>
+                    </h2>
                     <p>As an a tactile learner, you learn by touching and doing. You understand and remember things
                         through physical movement. You are a "hands-on" learner who prefers to touch, move, build, or
                         draw what you learn, and you tend to learn better when some type of physical activity is
                         involved.</p>
-                    <h3>Here are The Learning Buddy Recommendations for Tactile Learners</h3>
+                    <h5>Here’s how you can build and improve your study habits:</h5>
 
                     <!-- This code group contains the recommendations for tactile learners. -->
                     <div id='tactile-recommendations'>
@@ -137,20 +240,24 @@
                         </p>
                         <p id='recommendation'>When possible, role play, type, take notes, or construct models to learn
                             the information. </p>
+                        <br>
                     </div>
                 </div>
+
+            </div>
+
+            <!-- This code group contains the controls to be displayed in navigating the quiz. -->
+            <div class='controls'>
+                <button id='start-btn' class='start-btn'>Begin</button>
+                <button id='next-btn' class='next-btn hide'>Next Question</button>
+                <button id='result-btn' class='results-btn hide'>See My Results</button>
+                <input type='button' id='done-btn' class='done-button hide' onclick="location.href='/index.html';"
+                    value='Done' />
             </div>
         </div>
-
-        <!-- This code group contains the controls to be displayed in navigating the quiz. -->
-        <div class='controls'>
-            <button id='start-btn' class='start-btn'>Begin</button>
-            <button id='next-btn' class='next-btn hide'>Next</button>
-            <button id='result-btn' class='results-btn hide'>See My Results</button>
-            <input type='button' id='done-btn' class='done-button hide' onclick="location.href='/index.html';"
-                value='Done' />
-        </div>
     </div>
+
+    <img src='resources/main-radial.png' id='main-radial'>
     <!-- This line references to the Firebase connection. -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
 </body>

@@ -4,22 +4,9 @@
     box-sizing: border-box;
   }
 
-  /* Styles the header */
-  .header {
-      background-color:transparent;
-      padding: 40px 40px;
-      color: black;
-      text-align: left;
-    }
-
-  h1 {
-    margin:0;
-    display:inline-block;
-    padding: 10px;
-  }
-  .taskmanbackbtn{
-    float: left;
-  }
+html {
+  overflow-y: scroll !important;
+}
 
    /* Style the input text field */
    input {
@@ -28,9 +15,9 @@
     outline: 100;
     background: transparent;
     border-bottom: 2px solid black;
-    width: 600px;
-    margin: 60px;
-    font-size: 16px;
+    width: 500px;
+    margin: 30px;
+    font-size: 18px;
   }
 
   /* Style the "Add" button */
@@ -50,6 +37,12 @@
     background-color: #bbb;
     color: #FFF;
   }
+
+  .addbtn:active{
+    background-color: #bbb;
+    box-shadow: 0 5px #666;
+    transform: translateY(100px);
+  }
   
   /* This styles the tasks and the task borders*/
   ul li {
@@ -57,9 +50,12 @@
     cursor: pointer;
     position: relative;
     padding: 50px 8px 50px 40px;
-    border-bottom-width: 40;
-    margin: 0 350px 70px 350px;
+    border-bottom-width: 20px;
+    margin: 0 350px 40px 350px;
+
     background: #eee;
+    border-radius: 25px;
+
     font-size: 18px;
     transition: 0.2s;
   
@@ -76,7 +72,7 @@
   
   /* When clicked on, add a background color and strike out text */
   ul li.checked {
-    background: #888;
+    background: #130D6F;
     color: #fff;
     text-decoration: line-through;
   }
@@ -89,8 +85,8 @@
     border-color: #fff;
     border-style: solid;
     border-width: 0 2px 2px 0;
-    top: 50px;
-    left: 16px;
+    top: 54px;
+    left: 18px;
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
@@ -101,7 +97,7 @@
     position: absolute;
     font-size: 30px;
     right: 0;
-    top: 30px;
+    top: 25px;
     padding: 12px 16px 12px 16px;
   }
   

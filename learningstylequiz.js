@@ -67,6 +67,7 @@ function setNextQuestion() {
 
 // This function shows the question and the answer choices.
 function showQuestion(question) {
+    document.getElementById('question-num').innerHTML = (currentQuestionIndex + 1) + ' of 24';
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
         const button = document.createElement('button')
