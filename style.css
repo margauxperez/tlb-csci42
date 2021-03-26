@@ -475,3 +475,21 @@ button {
     padding: 0 !important;
     color: #4D62E2;
 }
+
+#table {
+    border: 0;
+    border-collapse: collapse;
+}
+
+#qpiresults {
+    border: 0;
+    border-collapse: collapse;
+}
+
+#buttonborder {
+    border: none;
+}
+#tfoot {
+    border: none;
+}
+
