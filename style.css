@@ -475,3 +475,59 @@ button {
     padding: 0 !important;
     color: #4D62E2;
 }
+
+#table {
+    border: 0;
+    border-collapse: collapse;
+}
+
+#qpiresults {
+    border: 0;
+    border-collapse: collapse;
+}
+
+#buttonborder {
+    border: none;
+}
+#tfoot {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    text-align: center;
+    border: none;
+}
+
+#calc-QPI {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    background-color: #0D0745;
+}
+
+#clear {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    background-color: #031B89;
+    color: white;
+}
+
+#add {
+    font-family: 'Work Sans' !important;
+    font-weight: 600 !important;
+    background-color: #5E72EB;
+}
+
+#tbody {
+    font-family: 'Work Sans' !important;
+}
+
+#course-code {
+    font-family: 'Work Sans' !important;
+}
+
+#number-of-units {
+    font-family: 'Work Sans' !important;
+}
+
+#letter-mark {
+    font-family: 'Work Sans' !important;
+}

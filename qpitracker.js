@@ -9,6 +9,7 @@ const tfoot = document.querySelector("#tfoot");
 const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
+const qpiresults = document.querySelector("#qpiresults");
 let QPIArray = [];
 
 add.addEventListener("click", () => 
@@ -49,6 +50,12 @@ calcQPI.addEventListener("click", () => {
     let sumOfNumberOfUnits = 0, productOfSumOfNumberOfUnitsAndLetterMarks = 0,
     sumOfProductOfSumOfNumberOfUnitsAndLetterMarks = 0;
 
+    if (tbody.value === "" || courseCode.value === "" || numberOfUnits.value <= 0 || letterMark.selectedIndex === 0)
+    {
+        alert("Table is empty.")
+    } 
+    else 
+    {
     QPIArray.forEach(result => {
         sumOfNumberOfUnits += parseFloat(result.numberOfUnits);
         productOfSumOfNumberOfUnitsAndLetterMarks = parseFloat(result.numberOfUnits) * parseFloat(result.letterMark);
@@ -61,15 +68,15 @@ calcQPI.addEventListener("click", () => {
     tdTotalNumberOfUnits.innerHTML = `Your Total Number Of Units is ${sumOfNumberOfUnits}`;
 
     tdQPI = document.createElement('td');
-    tdQPI.innerHTML = `your QPI is ${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
+    tdQPI.innerHTML = `${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
 
-    tr.appendChild(tdTotalNumberOfUnits);
+    //tr.appendChild(tdTotalNumberOfUnits);
     tr.appendChild(tdQPI);
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
     }
     tfoot.appendChild(tr);
-
+}
 });
 
 clear.addEventListener("click", () => {
@@ -78,7 +85,6 @@ clear.addEventListener("click", () => {
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
     }
-    
 
     table.classList.add("display-none");
     calcQPI.classList.add("display-none");
