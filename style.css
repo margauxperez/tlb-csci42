@@ -310,7 +310,7 @@ p {
 
 .rating {
     position: relative;
-    transform: translate(-53%, -50%) rotateY(180deg);
+    transform: translate(-56%, -50%) rotateY(180deg);
     display: flex;
     text-align: center;
     left: 15%;
@@ -453,7 +453,7 @@ button {
     position: absolute;
     margin: auto;
     padding: auto;
-    transform: translate(380%, -300%);
+    transform: translate(360%, -300%);
 }
 
 #quiz-contents {
