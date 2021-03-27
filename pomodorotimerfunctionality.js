@@ -6,7 +6,7 @@ var minutes = document.getElementById('minutes');
 var seconds = document.getElementById('seconds');
 var cycles = document.getElementById('cycles');
 
-var caption = document.getElementById('caption');
+var caption = document.getElementById('pomodoroCaption');
 
 var workMinutes = 25;
 var workSeconds = 0;
@@ -18,16 +18,20 @@ var cyclesCounter = 0;
 
 var startTimer;
 
-start.addEventListener('click', function(){ // start button. will work on hiding it after clicking
+pause.style.transform = "scale(0)"; //hides pause button at the very start
+
+start.addEventListener('click', function(){ // start button
     if(startTimer === undefined){
-        startTimer = setInterval(timer, 1000)
+        startTimer = setInterval(timer, 1000); //starts timer
+        start.style.transform = "scale(0)"; // hides start button
+        pause.style.transform = "scale(1)"; //shows pause button
     } else {
         alert("Timer is already running");
     }
 })
 
 reset.addEventListener('click', function(){ //resets everything completely 
-    caption.innerText = "Press start to begin!"
+    caption.innerText = "Press start to begin!";
 
     minutes.innerText = 25;
     seconds.innerText = "00";
@@ -41,6 +45,8 @@ reset.addEventListener('click', function(){ //resets everything completely
     longBreakSeconds = 0;
     cyclesCounter = 0;
 
+    start.style.transform = "scale(1)"; //shows start button
+    pause.style.transform = "scale(0)"; //hides pause button
 
     stopInterval()
     startTimer = undefined;
@@ -48,6 +54,10 @@ reset.addEventListener('click', function(){ //resets everything completely
 
 pause.addEventListener('click', function(){ // pause button. will work on hiding this by default until the timer starts running.
     caption.innerText = "Press start to resume!"
+
+    start.style.transform = "scale(1)"; //shows start button
+    pause.style.transform = "scale(0)"; //hides pause button
+
     stopInterval()
     startTimer = undefined;
 })

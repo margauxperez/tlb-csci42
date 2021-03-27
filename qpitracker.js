@@ -9,6 +9,8 @@ const tfoot = document.querySelector("#tfoot");
 const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
+const qpiresults = document.querySelector("#qpiresults");
+calcQPI.disabled = true;
 let QPIArray = [];
 
 add.addEventListener("click", () => 
@@ -19,6 +21,7 @@ add.addEventListener("click", () =>
     } 
     else 
     {
+        calcQPI.disabled = false;
         const tr = document.createElement("tr");
         const tdCourseCode = document.createElement("td");
         tdCourseCode.innerHTML = courseCode.value;
@@ -61,24 +64,23 @@ calcQPI.addEventListener("click", () => {
     tdTotalNumberOfUnits.innerHTML = `Your Total Number Of Units is ${sumOfNumberOfUnits}`;
 
     tdQPI = document.createElement('td');
-    tdQPI.innerHTML = `your QPI is ${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
+    tdQPI.innerHTML = `${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
 
-    tr.appendChild(tdTotalNumberOfUnits);
     tr.appendChild(tdQPI);
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
     }
     tfoot.appendChild(tr);
-
+  
 });
 
 clear.addEventListener("click", () => {
+    calcQPI.disabled = true;
     QPIArray = [];
     tbody.querySelectorAll("*").forEach(child => child.remove());
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
     }
-    
 
     table.classList.add("display-none");
     calcQPI.classList.add("display-none");
