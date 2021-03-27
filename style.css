@@ -550,6 +550,7 @@ button {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
+    padding-right: 40px;
 }
 
 #pomodoroTimerContainer{
@@ -558,15 +559,14 @@ button {
     margin: 0 auto;
     border: 5px solid #130D6F;
     border-radius: 8px;
+    padding-bottom: 225px;
+    padding-right: 10px;
 }
 
 #pomodoroMainTimer {
     display: flex;
-    align-self: center;
-    justify-self: center;
-
-    font-size: 100px;
-    font-weight: bold;
+    align-content: center;
+    justify-content: center;
 }
 
 #minutes {
@@ -589,4 +589,11 @@ button {
     font-size: 150px;
     font-weight: bold;
     text-align: center;
+}
+
+#pomodoroButtons{
+    display: flex;
+    gap: 70px;
+    align-content: center;
+    justify-content: center;
 }
