@@ -10,6 +10,7 @@ const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
 const qpiresults = document.querySelector("#qpiresults");
+calcQPI.disabled = true;
 let QPIArray = [];
 
 add.addEventListener("click", () => 
@@ -20,6 +21,7 @@ add.addEventListener("click", () =>
     } 
     else 
     {
+        calcQPI.disabled = false;
         const tr = document.createElement("tr");
         const tdCourseCode = document.createElement("td");
         tdCourseCode.innerHTML = courseCode.value;
@@ -73,6 +75,7 @@ calcQPI.addEventListener("click", () => {
 });
 
 clear.addEventListener("click", () => {
+    calcQPI.disabled = true;
     QPIArray = [];
     tbody.querySelectorAll("*").forEach(child => child.remove());
     if(tfoot.querySelector("tr") !== null){
