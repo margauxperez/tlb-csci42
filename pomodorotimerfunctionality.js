@@ -18,13 +18,13 @@ var cyclesCounter = 0;
 
 var startTimer;
 
-pause.style.transform = "scale(0)"; //hides pause button at the very start
+pause.disabled = true; //disables pause button at the very start
 
 start.addEventListener('click', function(){ // start button
     if(startTimer === undefined){
         startTimer = setInterval(timer, 1000); //starts timer
-        start.style.transform = "scale(0)"; // hides start button
-        pause.style.transform = "scale(1)"; //shows pause button
+        start.disabled = true; // disables start button
+        pause.disabled = false; //enables pause button
     } else {
         alert("Timer is already running");
     }
@@ -45,8 +45,8 @@ reset.addEventListener('click', function(){ //resets everything completely
     longBreakSeconds = 0;
     cyclesCounter = 0;
 
-    start.style.transform = "scale(1)"; //shows start button
-    pause.style.transform = "scale(0)"; //hides pause button
+    start.disabled = false; //enables start button
+    pause.disabled = true; //disables pause button
 
     stopInterval()
     startTimer = undefined;
@@ -55,8 +55,8 @@ reset.addEventListener('click', function(){ //resets everything completely
 pause.addEventListener('click', function(){ // pause button. will work on hiding this by default until the timer starts running.
     caption.innerText = "Press start to resume!"
 
-    start.style.transform = "scale(1)"; //shows start button
-    pause.style.transform = "scale(0)"; //hides pause button
+    start.disabled = false; //enables start button
+    pause.disabled = true; //disables pause button
 
     stopInterval()
     startTimer = undefined;
