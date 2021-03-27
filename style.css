@@ -546,6 +546,7 @@ button {
     width: 600px;
     margin: 0 auto;
     border: 5px solid #130D6F;
+    border-radius: 8px;
 }
 
 #pomodoroMainTimer {
