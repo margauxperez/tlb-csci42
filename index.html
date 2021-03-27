@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html style='overflow-y: hidden !important;'>
 
 <head>
+    <!-- This code group references to the favicon and Google fonts used. -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- This group references to the favicons to be used when TLB is used on different devices. -->
     <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png'>
     <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png'>
     <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png'>
@@ -23,18 +26,62 @@
     <meta name='msapplication-TileColor' content='#ffffff'>
     <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
     <meta name='theme-color' content='#ffffff'>
+
+    <!-- The following lines reference to the used Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- This references style.css as the stylesheet to be used for this page. -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
+    <script>
+        function startTime() {
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+            var d = today.getDate();
+            var y = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            document.getElementById('day').innerHTML = weekday[today.getDay()];
+            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
     <title>Home— The Learning Buddy</title>
 </head>
 
-<body>
+<body onload='startTime()'>
+
+    <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
-        <h2>TLB.</h2>
+        <div id='logo-full'>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
+        </div>
+        <img src='resources/nav-radial.png' id='nav-accent'>
         <div id='upper-side-nav'>
             <div id='side-nav-option'>
                 <a href='pomodorotimer.html'>Pomodoro Timer</a>
             </div>
             <div id='side-nav-option'>
-                <a href='qpitracker.html'>QPI Calculator</a>
+                <a href='qpitracker.html'>QPI Tracker</a>
             </div>
             <div id='side-nav-option'>
                 <a href='learningstylequiz.html'>Learning Style Quiz</a>
@@ -45,60 +92,110 @@
         </div>
         <div id='lower-side-nav'>
             <div id='side-nav-option'>
-                <a href='#'>Help</a>
+                <a href='#'>Help <img src='resources/help-circle.png'></a>
             </div>
             <div id='side-nav-option'>
-                <a href='feedback.html'>Send Feedback</a>
+                <a href='feedback.html'>Send Feedback <img src='resources/edit.png'></a>
             </div>
             <div id='side-nav-option'>
-                <a href='#'>Settings</a>
+                <a href='#'>Settings <img src='resources/settings.png'></a>
             </div>
             <div id='side-nav-option'>
-                <a href='#'>Sign Out</a>
+                <a href='#'>Sign Out <img src='resources/log-out.png'></a>
             </div>
         </div>
     </div>
+
+    <!-- This code group contains the main content of the homepage. -->
     <div id='main'>
         <h1>Let's get studying!</h1>
         <p>Hey buddy, make the most out of your study schedules through our productivity and organization tools just for
             you. </p>
-        <div id='tool-card'>
-            <a href='learningstylequiz.html'>Learning Style Quiz</a>
+        <div id='tools'>
+
+            <!-- This is the card for the learning style quiz. -->
+            <div id='tool-card' style='background-color: #FBA76B;'>
+                <a href='learningstylequiz.html'>
+                    <div id='card-content'>
+                        <h4>Learning Style Quiz</h4>
+                        <p id='card-detail'>Be more efficient when studying by knowing what learning style works for
+                            you.</p>
+                        <br>
+                        <img src='/resources/lsq-card.png' style='width: 100%;'>
+                    </div>
+                </a>
+            </div>
+
+            <!-- This is the card for the QPI tracker. -->
+            <a href='qpitracker.html'>
+                <div id='tool-card' style='background-color: #FA7D7C;'>
+                    <div id='card-content'>
+                        <h4>QPI Tracker</h4>
+                        <p id='card-detail'>Keep track of your #acadgoals by monitoring your grades.</p>
+                        <br><br><br>
+                        <img src='/resources/qpi-card.png' style='width: 100%;'>
+                    </div>
+            </a>
         </div>
-        <div id='tool-card'>
-            <a href='qpitracker.html'>QPI Tracker</a>
-        </div>
-        <div id='tool-card'>
-            <a href='pomodorotimer.html'>Pomodoro Timer</a>
-        </div>
-        <div id='tool-card'>
-            <a href='taskmanagement.html'>Task Management</a>
-        </div>
+
+        <!-- This is the card for the pomodoro timer. -->
+        <a href='pomodorotimer.html'>
+            <div id='tool-card' style='background-color: #5E72EB;'>
+                <div id='card-content'>
+                    <h4>Pomodoro Timer</h4>
+                    <p id='card-detail'>Feeling unmotivated? Get a small part of your task done under 20 minutes.</p>
+                    <br><br>
+                    <img src='/resources/clock-card.png' style='width: 100%;'>
+                </div>
+        </a>
+
     </div>
+    </div>
+    </div>
+    <div id="bottom-card">
+        <a href='taskmanagement.html'>
+            <div id='taskman-card' style='background-color: #996BFB;'>
+                <div id='card-content' class='row' style='padding-top: 0;'>
+                    <div class='col' style='padding-top: 24px;'>
+                    <h4>Task Management</h4>
+                    <p id='card-detail'>Stay aligned with your tasks of the day by creating a to-do list.</p>
+                </div>
+                <div class='col'>
+                    <img src='/resources/task-card.png' style='width: 50%;'>
+                </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+
+    <!-- This code group contains the account, time, and to-do list divs for the right panel. -->
     <div id='right-side-panel'>
         <div id='account-name'>
-            <p id='account-name'>account name</p>
-            <p id='account-email'>email</p>
-            <img id='account-img' />
+            <p id='account-name'></p>
+            <p id='account-email'></p>
         </div>
+        <br><br>
         <div id='date-time'>
-            <p id='time'>time</p>
-            <p id='day'>day</p>
-            <p id='date'>date</p>
-        </div>
-        <div id='todo-list'>
-            <div>
-                <h2 id='todo-list-heading'>to-do list</h2>
-                <a id='view-all' href='taskmanagement.html'>view all</a>
-            </div>
-            <a id='tag' href='#'>Add a new Task</a>
+            <div id='time'>time</div>
+            <p id='day' style='font-weight: bold;'>day</p>
+            <p id='date'></p>
         </div>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <!-- The following lines are used in the Bootstrap implementation. -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <img src='resources/main-radial.png' id='main-radial'>
 </body>
 
 </html>

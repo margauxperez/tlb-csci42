@@ -2,63 +2,192 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QPI Tracker</title>
-</head>
-<body>
-    <div class="wrapper">
-        <h1>QPI Tracker</h1>
-        <div class="form-row">
-            <div class="col">
-                <input id="course-code" class="form-control" type="text" placeholder="Course Code">
-            </div>
-            <div class="col">
-                <input id="number-of-units" class="form-control" type="number" placeholder="Number Of Units" min="1" max="6">
-            </div>
-            <div class="col">
-                <select id="letter-mark" class="form-control">
-                    <option value="">Letter Mark</option>
-                    <option value="4.0">A</option>
-                    <option value="3.5">B+</option>
-                    <option value="3.0">B</option>
-                    <option value="2.5">C+</option>
-                    <option value="2.0">C</option>
-                    <option value="1.0">D</option>
-                    <option value="0.0">F</option>
-                    <option value="0.0">W</option>
-                </select>
-            </div>
-            <div class="col">
-                <input id="add" class="btn btn-primary" type="button" value="Add">
 
+<head>
+    <!-- This references to style.css as this html page's stylesheet. -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- This group references to the favicons to be used when TLB is used on different devices. -->
+    <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png'>
+    <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png'>
+    <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png'>
+    <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png'>
+    <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png'>
+    <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png'>
+    <link rel='manifest' href='/favicon/manifest.json'>
+    <meta name='msapplication-TileColor' content='#ffffff'>
+    <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
+    <meta name='theme-color' content='#ffffff'>
+
+    <!-- The following lines reference to the used Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- This references to the javaScript files used in this html page. -->
+    <script defer src="qpitracker.js"></script>
+
+    <title>QPI Tracker– The Learning Buddy</title>
+</head>
+
+<body>
+
+    <!-- This code group contains the side navigation options. -->
+    <div id='side-nav'>
+        <div id='logo-full'>
+            <a href='index.html' style='padding-left: 0;'>
+                <h2 id='logo'>TLB</h2>
+                <h2 id='logo-dot'>.</h2>
+            </a>
+        </div>
+        <img src='resources/nav-radial.png' id='nav-accent'>
+        <div id='upper-side-nav'>
+            <div id='side-nav-option'>
+                <a href='pomodorotimer.html'>Pomodoro Timer</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='qpitracker.html'>QPI Tracker</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='learningstylequiz.html'>Learning Style Quiz</a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='taskmanagement.html'>Task Management</a>
             </div>
         </div>
-        <table id="table" class="table table-bordered display-none">
-            <thead>
-                <tr>
-                    <th>Course Code</th>
-                    <th>Number Of Units</th>
-                    <th>Letter Mark</th>
-                </tr>
-            </thead>
-            <tbody id="tbody">
-        
-            </tbody>
-            <tfoot id="tfoot">
-        
-            </tfoot>
-        </table>
-        <div class="row">
-            <div class="col">
-                <input id="calc-QPI" class="btn btn-success display-none" type="button" value="Calc QPI">
+        <div id='lower-side-nav'>
+            <div id='side-nav-option'>
+                <a href='#'>Help <img src='resources/help-circle.png'></a>
             </div>
-            <div class="col">
-            <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
+            <div id='side-nav-option'>
+                <a href='feedback.html'>Send Feedback <img src='resources/edit.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='#'>Settings <img src='resources/settings.png'></a>
+            </div>
+            <div id='side-nav-option'>
+                <a href='#'>Sign Out <img src='resources/log-out.png'></a>
             </div>
         </div>
     </div>
+
+    <!-- This code group contains the feature heading and details for the QPI Tracker. -->
+    <div id='main-feature'>
+        <div class='feature-heading'>
+            <div class='row'>
+                <div class='col'>
+                    <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0;'></a>
+                    <br><br>
+                    <h1><img src='resources/calc.png' style='width: 10%; padding-right: 8px;'>QPI Tracker</h1>
+                    <p>Keep track of your #acadgoals by monitoring your grades.</p>
+                </div>
+
+                <div id='account-name' class='col'>
+                    <p id='account-name'></p>
+                    <p id='account-email'></p>
+                </div>
+            </div>
+        </div>
+        <div style="float: left">
+        <table id="table" class="table">
+            <thead id="buttonborder">
+                <tr>
+                    <th>COURSE CODE</th>
+                    <th>UNITS</th>
+                    <th>LETTER MARK</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="course-code" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="number-of-units" class="form-control" type="number" min="1" max="6">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-row">
+                            <div class="col">
+                                <select id="letter-mark" class="form-control">
+                                    <option value=""></option>
+                                    <option value="4.0">A</option>
+                                    <option value="3.5">B+</option>
+                                    <option value="3.0">B</option>
+                                    <option value="2.5">C+</option>
+                                    <option value="2.0">C</option>
+                                    <option value="1.0">D</option>
+                                    <option value="0.0">F</option>
+                                    <option value="0.0">W</option>
+                                </select>
+                            </div>
+                        </div>  
+                    </td>
+                    <td id="buttonborder">
+                        <div class="form-row">
+                            <div class="col">
+                                <input id="add" class="btn btn-primary" type="button" value="ADD">
+                            </div> 
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                    
+            </tbody>
+            <!--<tfoot id="tfoot">
+
+            </tfoot> -->
+        </table>
+    </div>
+
+    <div style="float: left;margin-right:10px">
+        <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th id="buttonborder">Your QPI</th>      
+                </tr>
+                <tr>
+                    <td id="tfoot">
+
+                    </td> 
+                </tr>
+                <tr>
+                    <td id="buttonborder">
+                        <div class="col">
+                            <input id="calc-QPI" class="btn btn-success display-none" type="button" value="CALCULATE QPI">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="buttonborder">
+                        <div class="col">
+                            <input id="clear" class="btn btn-warning display-none" type="button" value="CLEAR">
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    </div>
     <script src="qpitracker.js"></script>
+    <img src='resources/main-radial.png' id='main-radial'>
 </body>
+
 </html>
