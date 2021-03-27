@@ -531,3 +531,13 @@ button {
 #letter-mark {
     font-family: 'Work Sans' !important;
 }
+
+/* Pomodoro Timer CSS. (this is my territory now) */
+
+#pomodoroCaption {
+    font-family: 'Work Sans';
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+

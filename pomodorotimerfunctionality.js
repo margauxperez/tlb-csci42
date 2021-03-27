@@ -6,7 +6,7 @@ var minutes = document.getElementById('minutes');
 var seconds = document.getElementById('seconds');
 var cycles = document.getElementById('cycles');
 
-var caption = document.getElementById('caption');
+var caption = document.getElementById('pomodoroCaption');
 
 var workMinutes = 25;
 var workSeconds = 0;
