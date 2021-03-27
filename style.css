@@ -541,3 +541,40 @@ button {
     text-align: center;
 }
 
+#pomodoroTimerContainer{
+    height: 200px;
+    width: 600px;
+    margin: 0 auto;
+    border: 5px solid #130D6F;
+}
+
+#pomodoroMainTimer {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    font-size: 100px;
+    font-weight: bold;
+}
+
+#minutes {
+    font-family: 'Work Sans';
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#semicolon {
+    font-family: 'Work Sans';
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#seconds{
+    font-family: 'Work Sans';
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+}
