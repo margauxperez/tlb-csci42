@@ -640,13 +640,15 @@ table {
 }
 
 #pomodoroTimerContainer {
-    height: 200px;
-    width: 600px;
+    height: 160px;
+    width: 400px;
     margin: 0 auto;
-    border: 5px solid #130D6F;
+    border: 5px solid #4D62E2;
     border-radius: 8px;
-    padding-bottom: 225px;
-    padding-right: 10px;
+    padding: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #pomodoroMainTimer {
@@ -657,29 +659,42 @@ table {
 
 #minutes {
     font-family: 'Work Sans';
-    font-size: 150px;
+    font-size: 104px;
     font-weight: bold;
     text-align: center;
-
+    margin-bottom: 0;
+    padding: 0;
 }
 
 #semicolon {
     font-family: 'Work Sans';
-    font-size: 150px;
+    font-size: 104px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 0;
 }
 
 #seconds {
     font-family: 'Work Sans';
-    font-size: 150px;
+    font-size: 104px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 0;
 }
 
 #pomodoroButtons {
     display: flex;
-    gap: 70px;
+    gap: 20px;
     align-content: center;
     justify-content: center;
+}
+
+#pomodoroButtons button{
+    padding: 16px 58px;
+    background-color: #130D6F;
+    color: #FEFEFE;
+    border-style: none;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 4px rgba(13, 7, 69, 0.25);
+    text-transform: uppercase !important;
 }
