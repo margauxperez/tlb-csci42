@@ -511,11 +511,13 @@ button {
 #table {
     border: 0;
     border-collapse: collapse;
+    margin-left: 70px;
 }
 
 #qpiresults {
     border: 0;
     border-collapse: collapse;
+    margin-left: 200px;
 }
 
 #buttonborder {
