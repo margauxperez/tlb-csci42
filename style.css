@@ -122,12 +122,12 @@ p {
 }
 
 #lower-side-nav {
-    padding-top: 120px;
+    padding-top: 60px;
     text-align: right;
 }
 
 #upper-side-nav {
-    padding-top: 80px;
+    padding-top: 40px;
     text-align: right;
 }
 
@@ -293,24 +293,26 @@ p {
 }
 
 #date-time {
-    background-color: #eee;
-    text-align: center;
+    /* background-color: #eee; */
+    text-align: right;
     border-radius: 8px;
-    padding-top: 16px;
+    /* padding-top: 16px;
     padding-bottom: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 24px; */
+    padding-top: 40px;
+    padding-right: 32px;
 }
 
 #date-time p {
     padding: 0;
-    line-height: 0;
+    line-height: 2px;
     color: #0D0745;
 }
 
 #time {
     font-family: 'Work Sans';
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     color: #0D0745;
     padding-bottom: 8px !important;
 }
