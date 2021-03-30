@@ -121,7 +121,7 @@
                     <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0; margin-left: 32px;'></a>
                     <br><br>
                 </div>
-    
+
                 <div class='col-11'>
                     <h1><img src='resources/calc.png' style='width: 5%; padding-right: 8px;'>QPI Tracker</h1>
                     <p>Keep track of your #acadgoals by monitoring your grades.</p>
@@ -129,96 +129,101 @@
                 </div>
             </div>
         </div>
-        <div style="float: left">
-            <table id="table" class="table">
-                <thead id="buttonborder">
-                    <tr>
-                        <th>COURSE CODE</th>
-                        <th>UNITS</th>
-                        <th>LETTER MARK</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-row">
-                                <div class="col">
-                                    <input id="course-code" class="form-control" type="text">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-row">
-                                <div class="col">
-                                    <input id="number-of-units" class="form-control" type="number" min="1" max="6">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-row">
-                                <div class="col">
-                                    <select id="letter-mark" class="form-control">
-                                        <option value=""></option>
-                                        <option value="4.0">A</option>
-                                        <option value="3.5">B+</option>
-                                        <option value="3.0">B</option>
-                                        <option value="2.5">C+</option>
-                                        <option value="2.0">C</option>
-                                        <option value="1.0">D</option>
-                                        <option value="0.0">F</option>
-                                        <option value="0.0">W</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </td>
-                        <td id="buttonborder">
-                            <div class="form-row">
-                                <div class="col">
-                                    <input id="add" class="btn btn-primary" type="button" value="ADD">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-
-                </tbody>
-                <!--<tfoot id="tfoot">
+        <div class='quiz-contents'>
+            <div class='row' style='width: 90%; float:right'>
+                <div class='col'>
+                    <table id="table" class="table">
+                        <thead id="buttonborder">
+                            <tr>
+                                <th>COURSE CODE</th>
+                                <th>UNITS</th>
+                                <th>LETTER MARK</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input id="course-code" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input id="number-of-units" class="form-control" type="number" min="1"
+                                                max="6">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <select id="letter-mark" class="form-control">
+                                                <option value=""></option>
+                                                <option value="4.0">A</option>
+                                                <option value="3.5">B+</option>
+                                                <option value="3.0">B</option>
+                                                <option value="2.5">C+</option>
+                                                <option value="2.0">C</option>
+                                                <option value="1.0">D</option>
+                                                <option value="0.0">F</option>
+                                                <option value="0.0">W</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td id="buttonborder">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input id="add" class="btn btn-primary" type="button" value="ADD">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                        <!--<tfoot id="tfoot">
 
             </tfoot> -->
-            </table>
+                    </table>
+                </div>
+                <div class='col-4'>
+                    <div style="float: left;margin-right:10px">
+                        <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th id="buttonborder">Your QPI</th>
+                                </tr>
+                                <tr>
+                                    <td id="tfoot" style='font-size:64px !important;'>
+                                        <h1 id='placeholder'>-</h1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="buttonborder">
+                                        <div class="col">
+                                            <input id="calc-QPI" class="btn btn-success display-none" type="button"
+                                                value="CALCULATE QPI">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="buttonborder">
+                                        <div class="col">
+                                            <input id="clear" class="btn display-none" type="button"
+                                                value="CLEAR">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div style="float: left;margin-right:10px">
-            <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
-                <thead>
-                    <tr>
-                        <th id="buttonborder">Your QPI</th>
-                    </tr>
-                    <tr>
-                        <td id="tfoot">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="buttonborder">
-                            <div class="col">
-                                <input id="calc-QPI" class="btn btn-success display-none" type="button"
-                                    value="CALCULATE QPI">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="buttonborder">
-                            <div class="col">
-                                <input id="clear" class="btn btn-warning display-none" type="button" value="CLEAR">
-                            </div>
-                        </td>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-    </div>
-    <script src="qpitracker.js"></script>
-    <img src='resources/main-radial.png' id='main-radial'>
+        <script src="qpitracker.js"></script>
+        <img src='resources/main-radial.png' id='main-radial'>
 </body>
 
 </html>

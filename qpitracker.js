@@ -10,6 +10,7 @@ const table = document.querySelector("#table");
 const clear = document.querySelector("#clear");
 const calcQPI = document.querySelector("#calc-QPI");
 const qpiresults = document.querySelector("#qpiresults");
+const placeholder = document.getElementById('placeholder')
 calcQPI.disabled = true;
 let QPIArray = [];
 
@@ -70,6 +71,7 @@ calcQPI.addEventListener("click", () => {
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
     }
+    placeholder.classList.add('hide');
     tfoot.appendChild(tr);
   
 });
@@ -80,6 +82,7 @@ clear.addEventListener("click", () => {
     tbody.querySelectorAll("*").forEach(child => child.remove());
     if(tfoot.querySelector("tr") !== null){
         tfoot.querySelector("tr").remove();
+        placeholder.classList.remove('hide');
     }
 
     table.classList.add("display-none");
