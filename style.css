@@ -240,12 +240,11 @@ p {
 
 @media screen and (min-width: 1600px) {
     #main-radial {
-        left: 50%;
-        margin-left: -512px;
+        left: 5%;
         z-index: -999;
     }
 
-    h1 {
+    #banner-home {
         font-size: 72px !important;
     }
 
