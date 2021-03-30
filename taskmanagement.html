@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" type="text/css" href="taskmanstyle.css" />
+<link rel="stylesheet" type="text/css" href="taskmanstyle.css" />
 
 <head>
     <!-- This references to style.css as this html page's stylesheet. -->
@@ -61,10 +61,24 @@
         }
     </script>
 
+    <style>
+        /* Style the input text field */
+        input {
+            text-align: left;
+            border: 0;
+            outline: 100;
+            background: transparent;
+            border-bottom: 2px solid black;
+            width: 500px;
+            margin: 30px;
+            font-size: 18px;
+            padding-bottom: 8px;
+        }
+    </style>
     <title>Task Management – The Learning Buddy</title>
 </head>
 
-<body onload='startTime()'> 
+<body onload='startTime()'>
     <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
         <div id='logo-full'>
@@ -109,40 +123,41 @@
         </div>
     </div>
 
-        <div id='main-feature'>
-            <div class='feature-heading'>
-                <div class='row'>
-                    <div class='col-0.5'>
-                        <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0; margin-left: 32px;'></a>
-                        <br><br>
-                    </div>
-    
-                    <div class='col-11'>
-                        <h1><img src='resources/todolist.png' style='width: 5%; padding-right: 8px;'>Task Management</h1>
-                        <p>Stay aligned with your tasks by creating a to-do list.</p>
-                        <br>
-                    </div>
+    <div id='main-feature'>
+        <div class='feature-heading'>
+            <div class='row'>
+                <div class='col-0.5'>
+                    <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0; margin-left: 32px;'></a>
+                    <br><br>
+                </div>
+
+                <div class='col-11'>
+                    <h1><img src='resources/todolist.png' style='width: 5%; padding-right: 8px;'>Task Management</h1>
+                    <p>Stay aligned with your tasks by creating a to-do list.</p>
+                    <br>
                 </div>
             </div>
+        </div>
 
-    <style>
-        .container {
-          height: 120px;
-          text-align: center;
-        }
+        <style>
+            .container {
+                height: 120px;
+                text-align: center;
+            }
         </style>
 
-    <div class="container">
-        <input id="todoinput" class="todoinput" type="text" placeholder="Add task">
-        <button id="addbtn" onclick="addTask()" class="addbutton">+</button>
-    </div>
+        <div class="container">
+            <input id="todoinput" class="todoinput" type="text" placeholder="Add task">
+            <img src='resources/plus.png' style='padding:0; margin-left: 32px;' onclick="addTask()" id="addbtn">
+            <!-- <button id="addbtn" onclick="addTask()" class="addbutton">+</button> -->
+        </div>
 
 
-    <ul id="list">
-        <li class="checked">Task #1</li>
-        <li>Task #2</li>
-        <li>Task #3</li>
-    </ul>
-    <img src='resources/main-radial.png' id='main-radial'>
-    <script src="taskman.js"></script>
+        <ul id="list">
+            <li class="checked">Task #1</li>
+            <li>Task #2</li>
+            <li>Task #3</li>
+        </ul>
+        <img src='resources/main-radial.png' id='main-radial'>
+        <script src="taskman.js"></script>
 </body>
