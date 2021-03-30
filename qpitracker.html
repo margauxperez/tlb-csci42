@@ -130,7 +130,39 @@
             </div>
         </div>
         <div class='quiz-contents'>
-            <div class='row' style='width: 90%; float:right'>
+            <div class='row' style='width: 90%; padding-left:56px'>
+                <div class='col-4'>
+                    <div style="float: center;margin-right:24px; text-align: center;">
+                        <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th id="buttonborder">Your QPI</th>
+                                </tr>
+                                <tr style=" text-align: center;">
+                                        <td id="tfoot" style='font-size:72px !important; align-content: center;' class='qpi-holder'>
+                                        <h1 id='placeholder' style='padding: 0 !important'>-</h1>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td id="buttonborder">
+                                        <div class="col justify-content-center">
+                                            <input id="calc-QPI" class="calculate-button-success display-none" type="button"
+                                                value="CALCULATE QPI">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="buttonborder">
+                                        <div class="col justify-content-center">
+                                            <input id="clear" class="clear-button" type="button" value="CLEAR">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
                 <div class='col'>
                     <table id="table" class="table">
                         <thead id="buttonborder">
@@ -188,38 +220,7 @@
             </tfoot> -->
                     </table>
                 </div>
-                <div class='col-4'>
-                    <div style="float: left;margin-right:10px">
-                        <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
-                            <thead>
-                                <tr>
-                                    <th id="buttonborder">Your QPI</th>
-                                </tr>
-                                <tr>
-                                    <td id="tfoot" style='font-size:64px !important;'>
-                                        <h1 id='placeholder'>-</h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td id="buttonborder">
-                                        <div class="col">
-                                            <input id="calc-QPI" class="btn btn-success display-none" type="button"
-                                                value="CALCULATE QPI">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td id="buttonborder">
-                                        <div class="col">
-                                            <input id="clear" class="btn display-none" type="button"
-                                                value="CLEAR">
-                                        </div>
-                                    </td>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <script src="qpitracker.js"></script>

@@ -244,9 +244,11 @@ p {
         margin-left: -512px;
         z-index: -999;
     }
+
     h1 {
         font-size: 72px !important;
     }
+
     #main {
         padding-top: 90px;
     }
@@ -433,6 +435,50 @@ button {
     text-transform: uppercase !important;
 }
 
+.clear-button {
+    padding: 16px 58px;
+    background-color: #130D6F;
+    color: #FEFEFE;
+    border-style: none;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 4px rgba(13, 7, 69, 0.25);
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+
+.calculate-button {
+    padding: 16px 24px;
+    background-color: gray !important;
+    color: #FEFEFE;
+    border-style: none;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 4px rgba(13, 7, 69, 0.25);
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+
+.calculate-button-success {
+    padding: 16px 24px;
+    background-color: #5E72EB;
+    color: #FEFEFE;
+    border-style: none;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 4px rgba(13, 7, 69, 0.25);
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+
+.td-qpi{
+    border-top: none !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table tr {
+    text-align: center;
+    justify-content: center;
+}
+
 .controls {
     margin: auto;
     width: 50%;
@@ -541,6 +587,19 @@ button {
     font-weight: 600 !important;
     background-color: #031B89;
     color: white;
+}
+
+.qpi-holder {
+    background: #FEFEFE;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #4D62E2;
+    border-width: 2px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex;
+    padding: 0;
+    margin-bottom: 24px;
 }
 
 #add {

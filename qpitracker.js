@@ -65,6 +65,7 @@ calcQPI.addEventListener("click", () => {
     tdTotalNumberOfUnits.innerHTML = `Your Total Number Of Units is ${sumOfNumberOfUnits}`;
 
     tdQPI = document.createElement('td');
+    tdQPI.classList.add('td-qpi')
     tdQPI.innerHTML = `${(sumOfProductOfSumOfNumberOfUnitsAndLetterMarks / sumOfNumberOfUnits).toFixed(2)}`;
 
     tr.appendChild(tdQPI);
