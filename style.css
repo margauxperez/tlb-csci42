@@ -168,7 +168,7 @@ p {
     transform: translateY(-10px);
 }
 
-#bottom-card{
+#bottom-card {
     width: 680px;
     height: 10px;
     margin-left: 420px;
@@ -235,18 +235,24 @@ p {
     top: 0;
     left: 0;
     z-index: -999;
-  }
-  
-  @media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1024px) {
     #main-radial {
-      left: 50%;
-      margin-left: -512px;
-      z-index: -999;
+        left: 50%;
+        margin-left: -512px;
+        z-index: -999;
     }
-  }
+}
 
 .hide {
     display: none;
+}
+
+#form-group {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 #right-side-panel {
@@ -310,10 +316,12 @@ p {
 
 .rating {
     position: relative;
-    transform: translate(-56%, -50%) rotateY(180deg);
+    transform: rotateY(180deg);
     display: flex;
-    text-align: center;
-    left: 15%;
+    justify-content: center;
+    padding-bottom: 24px;;
+    /* text-align: center; */
+    /* left: 15%; */
 }
 
 .rating input {
@@ -370,7 +378,7 @@ textarea {
 
 }
 
-#submit-button{
+#submit-button {
     margin: auto;
     padding: auto;
     position: relative;
@@ -420,12 +428,12 @@ button {
     justify-content: center;
 }
 
-#next-btn{
-    background-color:#4D62E2;
+#next-btn {
+    background-color: #4D62E2;
     color: #FEFEFE;
 }
 
-#answer-buttons button{
+#answer-buttons button {
     margin: auto;
     margin-right: 16px;
     padding: 16px 24px;
@@ -437,7 +445,7 @@ button {
     transition-duration: 0.4s;
 }
 
-#answer-buttons button:hover{
+#answer-buttons button:hover {
     margin: auto;
     margin-right: 16px;
     padding: 16px 24px;
@@ -482,7 +490,7 @@ button {
     padding: 0 !important;
 }
 
-#question-num{
+#question-num {
     padding: 0 !important;
     color: #4D62E2;
 }
@@ -500,6 +508,7 @@ button {
 #buttonborder {
     border: none;
 }
+
 #tfoot {
     font-family: 'Work Sans' !important;
     font-weight: 600 !important;
@@ -553,7 +562,7 @@ button {
     padding-right: 40px;
 }
 
-#pomodoroTimerContainer{
+#pomodoroTimerContainer {
     height: 200px;
     width: 600px;
     margin: 0 auto;
@@ -584,14 +593,14 @@ button {
     text-align: center;
 }
 
-#seconds{
+#seconds {
     font-family: 'Work Sans';
     font-size: 150px;
     font-weight: bold;
     text-align: center;
 }
 
-#pomodoroButtons{
+#pomodoroButtons {
     display: flex;
     gap: 70px;
     align-content: center;
