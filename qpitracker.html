@@ -38,10 +38,36 @@
     <!-- This references to the javaScript files used in this html page. -->
     <script defer src="qpitracker.js"></script>
 
+    <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
+    <script>
+        function startTime() {
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+            var d = today.getDate();
+            var y = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            document.getElementById('day').innerHTML = weekday[today.getDay()];
+            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
     <title>QPI Tracker– The Learning Buddy</title>
 </head>
 
-<body>
+<body onload='startTime()'>
 
     <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
@@ -79,6 +105,11 @@
             <div id='side-nav-option'>
                 <a href='#'>Sign Out <img src='resources/log-out.png'></a>
             </div>
+            <div id='date-time'>
+                <div id='time'>time</div>
+                <p id='day' style='font-weight: bold;'>day</p>
+                <p id='date'></p>
+            </div>
         </div>
     </div>
 
@@ -100,91 +131,92 @@
             </div>
         </div>
         <div style="float: left">
-        <table id="table" class="table">
-            <thead id="buttonborder">
-                <tr>
-                    <th>COURSE CODE</th>
-                    <th>UNITS</th>
-                    <th>LETTER MARK</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-row">
-                            <div class="col">
-                                <input id="course-code" class="form-control" type="text">
+            <table id="table" class="table">
+                <thead id="buttonborder">
+                    <tr>
+                        <th>COURSE CODE</th>
+                        <th>UNITS</th>
+                        <th>LETTER MARK</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="course-code" class="form-control" type="text">
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-row">
-                            <div class="col">
-                                <input id="number-of-units" class="form-control" type="number" min="1" max="6">
+                        </td>
+                        <td>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="number-of-units" class="form-control" type="number" min="1" max="6">
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-row">
-                            <div class="col">
-                                <select id="letter-mark" class="form-control">
-                                    <option value=""></option>
-                                    <option value="4.0">A</option>
-                                    <option value="3.5">B+</option>
-                                    <option value="3.0">B</option>
-                                    <option value="2.5">C+</option>
-                                    <option value="2.0">C</option>
-                                    <option value="1.0">D</option>
-                                    <option value="0.0">F</option>
-                                    <option value="0.0">W</option>
-                                </select>
+                        </td>
+                        <td>
+                            <div class="form-row">
+                                <div class="col">
+                                    <select id="letter-mark" class="form-control">
+                                        <option value=""></option>
+                                        <option value="4.0">A</option>
+                                        <option value="3.5">B+</option>
+                                        <option value="3.0">B</option>
+                                        <option value="2.5">C+</option>
+                                        <option value="2.0">C</option>
+                                        <option value="1.0">D</option>
+                                        <option value="0.0">F</option>
+                                        <option value="0.0">W</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>  
-                    </td>
-                    <td id="buttonborder">
-                        <div class="form-row">
-                            <div class="col">
-                                <input id="add" class="btn btn-primary" type="button" value="ADD">
-                            </div> 
-                        </div>
-                    </td>
-                </tr>
-            </thead>
-            <tbody id="tbody">
-                    
-            </tbody>
-            <!--<tfoot id="tfoot">
+                        </td>
+                        <td id="buttonborder">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="add" class="btn btn-primary" type="button" value="ADD">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+                <!--<tfoot id="tfoot">
 
             </tfoot> -->
-        </table>
-    </div>
+            </table>
+        </div>
 
-    <div style="float: left;margin-right:10px">
-        <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
-            <thead>
-                <tr>
-                    <th id="buttonborder">Your QPI</th>      
-                </tr>
-                <tr>
-                    <td id="tfoot">
+        <div style="float: left;margin-right:10px">
+            <table id="qpiresults" class="table" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th id="buttonborder">Your QPI</th>
+                    </tr>
+                    <tr>
+                        <td id="tfoot">
 
-                    </td> 
-                </tr>
-                <tr>
-                    <td id="buttonborder">
-                        <div class="col">
-                            <input id="calc-QPI" class="btn btn-success display-none" type="button" value="CALCULATE QPI">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="buttonborder">
-                        <div class="col">
-                            <input id="clear" class="btn btn-warning display-none" type="button" value="CLEAR">
-                        </div>
-                    </td>
-                </tr>
-            </thead>
-        </table>
-    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="buttonborder">
+                            <div class="col">
+                                <input id="calc-QPI" class="btn btn-success display-none" type="button"
+                                    value="CALCULATE QPI">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="buttonborder">
+                            <div class="col">
+                                <input id="clear" class="btn btn-warning display-none" type="button" value="CLEAR">
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
     <script src="qpitracker.js"></script>
     <img src='resources/main-radial.png' id='main-radial'>
