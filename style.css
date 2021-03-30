@@ -533,7 +533,10 @@ button {
     text-align: center;
     width: 80%;
     margin: auto;
-    width: 80%;
+}
+
+table {
+    margin: 0px !important;
 }
 
 #question {
