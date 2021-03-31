@@ -2,14 +2,15 @@
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="taskmanstyle.css" />
 
 <head>
     <!-- This references to style.css as this html page's stylesheet. -->
     <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
     <!-- This group references to the favicons to be used when TLB is used on different devices. -->
     <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png'>
     <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png'>
@@ -28,7 +29,6 @@
     <meta name='msapplication-TileColor' content='#ffffff'>
     <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png'>
     <meta name='theme-color' content='#ffffff'>
-
     <!-- The following lines reference to the used Google fonts. -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -150,7 +150,8 @@
         </style>
 
         <div class="container">
-            <input id="todoinput" class="todoinput" type="text" placeholder="Add task" style="font-family: 'Work Sans' !important">
+            <input id="todoinput" class="todoinput" type="text" placeholder="Add task"
+                style="font-family: 'Work Sans' !important">
             <img src='resources/plus.png' style='padding:0; margin-left: 32px;' onclick="addTask()" id="addbtn">
             <!-- <button id="addbtn" onclick="addTask()" class="addbutton">+</button> -->
         </div>
