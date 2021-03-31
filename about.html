@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html style='overflow-y: hidden;'>
 
 <head>
-    <!-- This references to style.css as this html page's stylesheet. -->
-    <link href="style.css" rel="stylesheet">
+    <!-- This code group references to the favicon and Google fonts used. -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -32,36 +33,15 @@
         href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
-    <script>
-        function startTime() {
-            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            var today = new Date();
-            var d = today.getDate();
-            var y = today.getFullYear();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('time').innerHTML =
-                h + ":" + m + ":" + s;
-            document.getElementById('day').innerHTML = weekday[today.getDay()];
-            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
-            var t = setTimeout(startTime, 500);
-        }
+    <!-- This references to style.css as this html page's stylesheet. -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-        function checkTime(i) {
-            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-            return i;
-        }
-    </script>
-
-    <title>Pomodoro Timer– The Learning Buddy</title>
+    <title>About— The Learning Buddy</title>
 </head>
 
-<body onload='startTime()'>
+<body>
 
     <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
@@ -95,60 +75,53 @@
             </div>
             <!-- <div id='side-nav-option'>
                 <a href='#'>Settings <img src='resources/settings.png'></a>
-            </div>
-            <div id='side-nav-option'>
+            </div> -->
+            <!-- <div id='side-nav-option'>
                 <a href='#'>Sign Out <img src='resources/log-out.png'></a>
             </div> -->
-            <div id='date-time'>
-                <div id='time'>time</div>
-                <p id='day' style='font-weight: bold;'>day</p>
-                <p id='date'></p>
-            </div>
         </div>
     </div>
 
+    <!-- This code group contains the main content of the send feedback page. -->
     <div id='main-feature'>
+        <!-- main heading -->
         <div class='feature-heading'>
             <div class='row'>
                 <div class='col-0.5'>
                     <a href='/index.html'><img src='resources/arrow-left.png' style='padding:0; margin-left: 32px;'></a>
                     <br><br>
                 </div>
-    
+
                 <div class='col-11'>
-                    <h1><img src='resources/clock.png' style='width: 5%; padding-right: 8px;'>Pomodoro Timer</h1>
-                    <p>Feeling unmotivated? Get a small part of your task done under 25 minutes.</p>
+                    <h1><img src='resources/help-circle.png' style='width: 5%; padding-right: 8px;'>About</h1>
+                    <p>What is The Learning Buddy anyway?</p>
                     <br>
                 </div>
             </div>
         </div>
 
-        <p id="pomodoroCaption"> Press start to begin! </p>
-
-        <br>
-
-        <div id="pomodoroTimerContainer">
-            <div id="pomodoroMainTimer">
-                <p id="minutes"> 25 </p>
-                <p id="semicolon">:</p>
-                <p id="seconds"> 00 </p>
-                <!--p id="cycles"> 0 </p-->
-            </div>
+        <!-- This div contains the form fields such as the rating radio buttons, text area for feedback, and submit button. -->
+        <div class='row' style='width: 90%'>
+            <h2 style='padding-left: 104px; padding-bottom: 24px;'>Hey there, <br>learning buddy!</h2>
+            <p style='padding-left: 104px; padding-bottom: 56px;'> <b>The Learning Buddy</b> is a web application that aims to help students stay productive and organized. Due to
+                the nature of online classes, there is a greater need for students to manage their time and schoolwork
+                better, which can prove very challenging for some. The application acts like a simplified, user-friendly
+                study toolbox that makes productivity and organization easy for students situated in an online learning
+                setting. </p>
+            <br>
+            <br>
+            <h3 style='padding-left: 104px; padding-bottom: 24px;'>Your OG learning buddies</h3>
+            <p></p>
         </div>
 
-        <br><br>
 
-        <div id=pomodoroButtonContainer>
-            <div id=pomodoroButtons>
-                <button id="start" class="btn"><b>Start</b></button>
-                <button id="pause" class="btn"><b>Pause</b></button>
-                <button id="reset" class="btn"><b>Reset</b></button>
-            </div>
-        </div>
-
-        <script src="pomodorotimerfunctionality.js"></script>
-        <img src='resources/main-radial.png' id='main-radial'>
     </div>
+
+    <img src='resources/main-radial.png' id='main-radial'>
+
+    <!-- This lines references to the Firebase and javaScript files used. -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+    <script src="feedback.js"></script>
 
 </body>
 
