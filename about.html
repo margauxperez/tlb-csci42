@@ -33,6 +33,32 @@
         href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Work+Sans:wght@300;600;700&display=swap"
         rel="stylesheet">
     
+     <!-- This code is based from a w3schools.com tutorial and has been modified to meet the required content for TLB -->
+     <script>
+        function startTime() {
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var today = new Date();
+            var d = today.getDate();
+            var y = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            document.getElementById('day').innerHTML = weekday[today.getDay()];
+            document.getElementById('date').innerHTML = month[today.getMonth()] + " " + d + ", " + y;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
     <!-- This references to style.css as this html page's stylesheet. -->
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -41,7 +67,7 @@
     <title>About— The Learning Buddy</title>
 </head>
 
-<body>
+<body onload='startTime()'>
 
     <!-- This code group contains the side navigation options. -->
     <div id='side-nav'>
@@ -79,7 +105,11 @@
             <!-- <div id='side-nav-option'>
                 <a href='#'>Sign Out <img src='resources/log-out.png'></a>
             </div> -->
-            
+            <div id='date-time'>
+                <div id='time'>time</div>
+                <p id='day' style='font-weight: bold;'>day</p>
+                <p id='date'></p>
+            </div>
         </div>
     </div>
 
