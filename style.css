@@ -798,10 +798,13 @@ table {
 .member {
     float: left;
     width: 20%;
+    
 }
 
 .name {
     bottom: 0px;
+    text-align:center;
+    
 }
 
 .member img {
@@ -810,9 +813,14 @@ table {
 
 #cutepictures {
     padding-left: 100px;
+
+    
 }
 
 #profpic {
     border-radius: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
   
