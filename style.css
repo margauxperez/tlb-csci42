@@ -790,7 +790,23 @@ table {
     color:white;
   }
 
+  #aboutPhotos {
+    display: flex;
+    gap: 100px;
+    align-content: center;
+    justify-content: center;
+  }
+
   #profilepictures {
-    border-radius: 30%;
+    border-radius: 20px;
+  }
+
+  #KylaProfile {
+    display: inline;
+    padding-left:10px;
+  }
+
+  #KylaProfileName {
+    display: block;
   }
   
