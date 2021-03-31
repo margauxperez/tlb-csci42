@@ -805,6 +805,7 @@ table {
     bottom: 0px;
     text-align:center;
     font-size: 14px;
+    color: #0D0745;
 }
 
 .member img {
@@ -812,11 +813,12 @@ table {
 }
 
 #cutepictures {
-    padding-left: 20px;
+    padding-left: 54px;
+    width: 85%;
 }
 
 #profpic {
-    border-radius: 20%;
+    border-radius: 8px;
     max-width: 100%;
     display: block;
     margin-left: auto;
