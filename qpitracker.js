@@ -14,15 +14,15 @@ const placeholder = document.getElementById('placeholder')
 calcQPI.disabled = true;
 let QPIArray = [];
 
-add.addEventListener("click", () => 
+add.addEventListener("click", () => // adds course code, units, and grades to table
 {
-    if (courseCode.value === "" || numberOfUnits.value <= 0 || letterMark.selectedIndex === 0)
+    if (courseCode.value === "" || numberOfUnits.value <= 0 || letterMark.selectedIndex === 0) // checks if all form fields have been filled
     {
         alert("Please input the right values.")
     } 
     else 
     {
-        calcQPI.disabled = false;
+        calcQPI.disabled = false; // enables Calculate QPI button
         const tr = document.createElement("tr");
         const tdCourseCode = document.createElement("td");
         tdCourseCode.innerHTML = courseCode.value;
@@ -33,8 +33,8 @@ add.addEventListener("click", () =>
         tr.appendChild(tdCourseCode);
         tr.appendChild(tdNumberOfUnits);
         tr.appendChild(tdLetterMark);
-        tbody.appendChild(tr);
-        table.classList.remove("display-none");
+        tbody.appendChild(tr); // adds inputted values to table
+        table.classList.remove("display-none"); 
         calcQPI.classList.remove("display-none");
         clear.classList.remove("display-none");
         QPIArray.push
@@ -49,7 +49,7 @@ add.addEventListener("click", () =>
     
 })
 
-calcQPI.addEventListener("click", () => {
+calcQPI.addEventListener("click", () => { // calculates the QPI
     let sumOfNumberOfUnits = 0, productOfSumOfNumberOfUnitsAndLetterMarks = 0,
     sumOfProductOfSumOfNumberOfUnitsAndLetterMarks = 0;
 
@@ -77,7 +77,7 @@ calcQPI.addEventListener("click", () => {
   
 });
 
-clear.addEventListener("click", () => {
+clear.addEventListener("click", () => { // clears table values
     calcQPI.disabled = true;
     QPIArray = [];
     tbody.querySelectorAll("*").forEach(child => child.remove());
