@@ -8,7 +8,7 @@ CSCI42 Introduction to Software Engineering Project
 The Learning Buddy is a web application that aims to help students stay productive and organized. Due to the nature of online classes, there is a greater need for students to manage their time and schoolwork better, which can prove very challenging for some. The application acts like a simplified, user-friendly study toolbox that makes productivity and organization easy for students situated in an online learning setting. 
 
 ## Scope
-The Learning Buddy is a web application that contains five different tools that students may find useful in an online learning environment. The Learning Style Quiz, and Pomodoro Timer are the features of the application that target the improvement of a student’s productivity. The Grade (QPI) Tracker and Task Management pages are features geared towards organization and academic accountability. The system is based on a NoSQL database to run its functions. The project also aims to provide a good user experience to maximize the benefit of using this web application. 
+The Learning Buddy is a web application that contains four different tools that students may find useful in an online learning environment. The Learning Style Quiz, and Pomodoro Timer are the features of the application that target the improvement of a student’s productivity. The Grade (QPI) Tracker and Task Management pages are features geared towards organization and academic accountability. The project also aims to provide a good user experience to maximize the benefit of using this web application. 
 
 ## Referenced Materials
 
@@ -16,7 +16,7 @@ The Learning Buddy is a web application that contains five different tools that 
 *  **The Pomodoro Technique** - https://todoist.com/productivity-methods/pomodoro-technique
 
 ## Operating Environment
-The developers of The Learning Buddy will use HTML, CSS, and Javascript with and Firebase. It can run on MacOS and Windows.
+The developers of The Learning Buddy will use HTML, CSS, and Javascript with Firebase. It can run on MacOS and Windows.
 
 ## Github Workflow
 [Very helpful interactive tutorial on the Git workflow](https://learngitbranching.js.org/)
@@ -59,7 +59,6 @@ Currently, the following files are included in this project:
 * style.css
 * taskmanagement.html
 * taskman.js
-* taskmanstyle.css
 * README.md
           
 * favicon (folder)
