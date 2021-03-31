@@ -804,6 +804,7 @@ table {
 .name {
     bottom: 0px;
     text-align:center;
+    font-size: 20px;
     
 }
 
@@ -812,7 +813,7 @@ table {
 }
 
 #cutepictures {
-    padding-left: 100px;
+    padding-left: 20px;
 
     
 }
